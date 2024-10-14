@@ -976,7 +976,40 @@ input.mail_bt::placeholder {
     color: #000; /* Màu chữ */
     text-align: center; /* Canh giữa chữ */
 }
+.slide-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 15px;
+}
 
+.slide-indicator span {
+    margin: 0 5px;
+    cursor: pointer;
+    color: grey;
+}
 
+.slide-indicator .active {
+    font-weight: bold;
+    color: black;
+}
 
+.slide-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #000; /* Thay đổi màu sắc theo ý bạn */
+}
 
+.font-weight-bold {
+    font-weight: bold; /* Đảm bảo rằng lớp này định nghĩa độ đậm */
+}
+
+/* Hiệu ứng hover */
+.slide-indicator span:hover {
+    color: black; /* Hoặc màu sắc bạn muốn */
+}

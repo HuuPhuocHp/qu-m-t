@@ -1,18 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    const slideNumber = document.getElementById('slide-number');
+// Khởi động carousel và cập nhật số slide
+$('#electronic_main_slider').carousel({
+    interval: 3000 // Tự động chuyển slide mỗi 3 giây
+});
 
-    // Cập nhật số thứ tự slide
-    function updateSlideNumber() {
-        const currentSlideIndex = document.querySelector('.carousel-item.active').getAttribute('data-slide-to');
-        slideNumber.textContent = `${parseInt(currentSlideIndex) + 1} / ${totalSlides}`;
+// Lấy tổng số slide
+var totalSlides = document.querySelectorAll('#electronic_main_slider .carousel-item').length;
+
+// Hàm cập nhật số slide
+function updateSlideNumber(currentIndex) {
+    // Cập nhật số slide
+    var slideNumberElement = document.getElementById('slide-number');
+    slideNumberElement.textContent = (currentIndex + 1) + " / " + totalSlides;
+
+    // Xóa lớp in đậm khỏi tất cả các số
+    for (let i = 1; i <= totalSlides; i++) {
+        var numElement = document.getElementById(`slide-number-${i}`);
+        numElement.classList.remove('font-weight-bold'); // Xóa in đậm
     }
 
-    // Cập nhật số thứ tự khi chuyển slide
-    $('#main_slider').on('slid.bs.carousel', function() {
-        updateSlideNumber();
-    });
+    // Thêm lớp in đậm cho số hiện tại
+    var currentNumElement = document.getElementById(`slide-number-${currentIndex + 1}`);
+    currentNumElement.classList.add('font-weight-bold'); // In đậm cho số hiện tại
+}
 
-    // Gọi hàm một lần khi tải trang để thiết lập số đầu tiên
-    updateSlideNumber();
+// Khi carousel thay đổi slide
+$('#electronic_main_slider').on('slide.bs.carousel', function (event) {
+    var currentIndex = $(event.relatedTarget).index();
+    updateSlideNumber(currentIndex);
 });
+
+// Khởi tạo số slide khi tải trang
+updateSlideNumber(0);
