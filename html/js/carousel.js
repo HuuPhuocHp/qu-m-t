@@ -1,18 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    const slideNumber = document.getElementById('slide-number');
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector("#jewellery_main_slider");
+  const indicators = document.querySelectorAll("#slide-indicator span");
 
-    // Cập nhật số thứ tự slide
-    function updateSlideNumber() {
-        const currentSlideIndex = document.querySelector('.carousel-item.active').getAttribute('data-slide-to');
-        slideNumber.textContent = `${parseInt(currentSlideIndex) + 1} / ${totalSlides}`;
-    }
+  if (carousel) {
+     // Cập nhật chỉ báo slide khi chuyển slide
+     carousel.addEventListener("slide.bs.carousel", function (event) {
+        indicators.forEach(indicator => indicator.classList.remove("active"));
+        indicators[event.to].classList.add("active");
+     });
 
-    // Cập nhật số thứ tự khi chuyển slide
-    $('#main_slider').on('slid.bs.carousel', function() {
-        updateSlideNumber();
-    });
-
-    // Gọi hàm một lần khi tải trang để thiết lập số đầu tiên
-    updateSlideNumber();
+     // Xử lý khi nhấn vào số slide
+     indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", function () {
+           $(carousel).carousel(index);
+        });
+     });
+  }
 });
+
+ 
