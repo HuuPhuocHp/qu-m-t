@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- thông tin cơ bản -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Eflyer</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+     <!-- trang chủ -->
+     <div class="banner_bg_main">
+        <!-- header top section  -->
+        <div class="container">
+           <div class="header_section_top">
+              <div class="row">
+                 <div class="col-sm-12">
+                    <div class="custom_menu">
+                       <ul>
+                          <li><a href="#">       </a></li>
+                          <li><a href="#">Bán chạy </a></li>
+                          <li><a href="#">Mẫu mới </a></li>
+                          <li><a href="#">Chương trình khuyến mãi </a></li>
+                          <li><a href="#">Dịch vụ khách hàng </a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- phần trên tiêu đề -->
+        <!-- logo tiêu đề -->
+        <div class="logo_section">
+           <div class="container">
+              <div class="row">
+                 <div class="col-sm-12">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                 </div>
+              </div>
+           </div> 
+        </div>
+    <div class="container">
+        <h1 class="page-title">Giỏ hàng </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Danh sách sản phẩm -->
+            </tbody>
+        </table>
+        <div class="total">
+            <strong>Tổng cộng: <span id="total-price">0</span> VND</strong>
+        </div>
+    </div>
+    <div class="message" id="message"></div>
+
+
+    <script>
+        // Danh sách sản phẩm mặc định
+        let cart = [
+            {
+                name: "Nike React Element 87" ,
+                price: 3800000,
+                quantity: 2 ,
+                image:  "images/anh6.png"
+            },
+            { 
+                name: "Adidas Yeezy Boost 350 V2", 
+                price: 6000000, 
+                quantity: 1 ,
+                image: "images/anh13.png"
+            },
+            { 
+                name: "Converse x Off-White Chuck 70", 
+                price: 8000000, 
+                quantity: 3 ,
+                image: "images/anh11.png"
+            },
+        ];
+    
+        // Hàm hiển thị thông báo
+        function showMessage(message) {
+            const messageElement = document.getElementById("message");
+            messageElement.textContent = message;
+            messageElement.style.display = "block";
+    
+            // Ẩn thông báo sau 2 giây
+            setTimeout(() => {
+                messageElement.style.display = "none";
+            }, 5000);
+        }
+    
+        // Hàm thay đổi số lượng sản phẩm
+        function changeQuantity(index, change) {
+          cart[index].quantity += change;
+    
+            // Không cho phép số lượng <= 0
+            if (cart[index].quantity <= 0) {
+                cart[index].quantity = 1;
+                showMessage("Số lượng không thể nhỏ hơn 1!");
+            } else {
+                showMessage(`Cập nhật số lượng sản phẩm "${cart[index].name}" thành công!`);
+            }
+    
+            renderCart();
+        }
+    
+        // Hiển thị giỏ hàng
+        function renderCart() {
+    const cartItems = document.getElementById("cart-items");
+    const totalPrice = document.getElementById("total-price");
+
+    cartItems.innerHTML = ""; // Xóa nội dung cũ
+
+    cart.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; border-radius: 5px;">
+                    <span>${item.name}</span>
+                </div>
+            </td>
+            <td>${item.price.toLocaleString()} VND</td>
+            <td>${item.quantity}</td>
+            <td>${(item.price * item.quantity).toLocaleString()} VND</td>
+            <td>
+                <button class="btn-delete" onclick="removeFromCart(${index})">Xóa</button>
+            </td>
+        `;
+        cartItems.appendChild(row);
+    });
+
+    // Cập nhật tổng tiền
+    totalPrice.textContent = calculateTotal().toLocaleString();
+}
+
+        // Hàm tính tổng tiền
+        function calculateTotal() {
+            return cart.reduce((total, item) => 7600000+6000000+24000000, 0);
+        }
+    
+        // Khởi tạo giao diện giỏ hàng
+        renderCart();
+    </script>
+    
+   </body>
+</html>

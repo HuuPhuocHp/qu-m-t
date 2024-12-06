@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <!-- basic -->
+      <!-- thông tin cơ bản -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Electronic</title>
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Eflyer</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -37,15 +37,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
-      <!-- banner bg main start -->
+      <!-- trang chủ -->
       <div class="banner_bg_main">
-         <!-- header top section start -->
+         <!-- header top section  -->
          <div class="container">
             <div class="header_section_top">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
+                           <li><a href="#">       </a></li>
                            <li><a href="#">Bán chạy </a></li>
                            <li><a href="#">Mẫu mới </a></li>
                            <li><a href="#">Chương trình khuyến mãi </a></li>
@@ -56,8 +57,8 @@
                </div>
             </div>
          </div>
-         <!-- header top section start -->
-         <!-- logo section start -->
+         <!-- phần trên tiêu đề -->
+         <!-- logo tiêu đề -->
          <div class="logo_section">
             <div class="container">
                <div class="row">
@@ -65,10 +66,10 @@
                      <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                   </div>
                </div>
-            </div>
+            </div> 
          </div>
-         <!-- logo section end -->
-         <!-- header section start -->
+         <!-- logo cuối-->
+         <!-- phần chú ý  -->
          <div class="header_section">
             <div class="container">
                <div class="containt_main">
@@ -81,43 +82,189 @@
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                   <div class="dropdown">
-
+                      
                      </button>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    
+               
                      </div>
                   </div>
-                  <div class="main">
-                     <!-- Another variation with a button -->
-                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm ">
-                        <div class="input-group-append">
-                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+         <div class="main">
+                      <title>Tìm kiếm nâng cao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .search-section {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-section label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .search-section select, 
+        .search-section input, 
+        .search-section button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-section button {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .search-section button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lọc sản phẩm </h1>
+
+    <!-- Tìm kiếm nâng cao -->
+   
+      <div class="container advanced-search" id="advancedSearch">
+        <label for="keyword">Từ khóa:</label>
+        <input type="text" id="keyword" placeholder="Nhập mục đích sử dụng">
+
+        <label for="brand">Thương hiệu:</label>
+        <select id="brand">
+            <option value="">Tất cả</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Converse">Converse</option>
+        </select>
+
+        <label for="price-range">Khoảng giá:</label>
+        <select id="price-range">
+            <option value="">Tất cả</option>
+            <option value="1000000-3000000">1 - 3 triệu</option>
+            <option value="3000000-5000000">3 - 5 triệu</option>
+            <option value="5000000-9000000">trên 5 triệu</option>
+        </select>
+
+        <label for="type">Kiểu dáng:</label>
+        <select id="type">
+            <option value="">Tất cả</option>
+            <option value="high">Cổ cao</option>
+            <option value="low">Cổ ngắn</option>
+        </select>
+
+        <button onclick="searchProducts()">Tìm kiếm</button>
+    </div>
+
+    <!-- Hiển thị thông báo -->
+    <p id="message" class="message"></p>
+
+    <script>
+       
+  
+        function searchProducts() {
+            const keyword = document.getElementById('keyword').value.toLowerCase();
+            const brand = document.getElementById('brand').value;
+            const priceRange = document.getElementById('price-range').value;
+            const type = document.getElementById('type').value;
+
+            let minPrice = 0, maxPrice = Infinity;
+            if (priceRange) {
+                [minPrice, maxPrice] = priceRange.split('-').map(Number);
+            }
+
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                const productBrand = product.getAttribute('data-brand').toLowerCase();
+                const productPrice = parseInt(product.getAttribute('data-price'));
+                const productType = product.getAttribute('data-type').toLowerCase();
+                const productName = product.querySelector('h4').textContent.toLowerCase();
+
+                const matchKeyword = !keyword || productName.includes(keyword);
+                const matchBrand = !brand || productBrand === brand.toLowerCase();
+                const matchPrice = productPrice >= minPrice && productPrice <= maxPrice;
+                const matchType = !type || productType === type.toLowerCase();
+
+                if (matchKeyword && matchBrand && matchPrice && matchType) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    </script>
+                    <div class="input-group">
+                  <div class="input-group" style="max-width: 600px; margin: 0 auto;">
+                     <input type="text" class="form-control" placeholder="Tìm kiếm" id="searchInput">
+                     <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522" onclick="searchFunction()">
                            <i class="fa fa-search"></i>
-                           </button>
-                        </div>
+                        </button>
                      </div>
                   </div>
+                  <!-- Chèn thông báo -->
+                  <div style="text-align: center; margin-top: 10px;">
+                     <p id="searchMessage" style="color: green; font-weight: bold; margin: 0;"></p>
+                  </div>
+                  
+                  <script>
+                     function searchFunction() {
+                        const searchInput = document.getElementById("searchInput").value;
+                        const messageElement = document.getElementById("searchMessage");
+                  
+                        if (searchInput.trim() !== "") {
+                           messageElement.textContent = "Tìm kiếm thành công!";
+                        } else {
+                           messageElement.textContent = "Vui lòng nhập từ khóa trước khi tìm kiếm!";
+                           messageElement.style.color = "red";
+                        }
+                     }
+                  </script>
+                  
+
                   <div class="header_box">
                      <div class="lang_box ">
-                  
-                       
+                        
+                        
                         <div class="dropdown-menu ">
                            <a href="#" class="dropdown-item">
-                          
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
                            </a>
                         </div>
                      </div>
                      <div class="login_menu">
                         <ul>
-                           <li class="cart"> 
+                           <li class="cart">
                            <a href="#">
+                              <a href = "giohang.html">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Giỏ hàng </span></a>
+                           </li>
+                           
                            <li class="login">
                            <a href="#">
+                              <a href ="ls.html" >
                               <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10">Đăng nhập </span></a>
+                              <span class="padding_10"> Hp </span></a>
                            </li>
                         </ul>
                      </div>
@@ -126,7 +273,7 @@
             </div>
          </div>
          <!-- header section end -->
-         <!-- banner section start -->
+         <!-- biểu ngữ bắt đầu -->
          <div class="banner_section layout_padding">
             <div class="container">
                <div id="my_slider" class="carousel slide" data-ride="carousel">
@@ -135,7 +282,7 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
-                             
+                           
                            </div>
                         </div>
                      </div>
@@ -155,7 +302,8 @@
                            </div>
                         </div>
                      </div>
-                  </div>
+                    
+                 
          <!-- banner section end -->
       </div>
       <!-- banner bg main end -->
@@ -290,12 +438,26 @@
                   </div>
                </div>
             </div>
-            <a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-            </a>
+            <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+              
+             
+            
+                 
+               <!-- Nút mũi tên trái -->
+               <a class="carousel-control-prev" href="#jewellery_main_slider" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+               </a>
+               
+                  <div id="slide-indicator" class="slide-indicator">
+                     <span id="slide-number-1" data-slide-to="0">1</span>
+                     <span id="slide-number-2" data-slide-to="1">2</span>
+                     <span id="slide-number-3" data-slide-to="2">3</span>
+              </div>
+               <!-- Nút mũi tên phải -->
+               <a class="carousel-control-next" href="#jewellery_main_slider" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
          </div>
       </div>
        <!-- fashion section end -->
@@ -328,6 +490,7 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
+      <script src="carousel.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>

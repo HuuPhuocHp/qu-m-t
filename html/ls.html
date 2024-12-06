@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Sử Mua Hàng</title>
+    <!-- Kết nối với file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- trang chủ -->
+     <div class="banner_bg_main">
+        <!-- header top section  -->
+        <div class="container">
+           <div class="header_section_top">
+              <div class="row">
+                 <div class="col-sm-12">
+                    <div class="custom_menu">
+                       <ul>
+                          <li><a href="#">       </a></li>
+                          <li><a href="#">Bán chạy </a></li>
+                          <li><a href="#">Mẫu mới </a></li>
+                          <li><a href="#">Chương trình khuyến mãi </a></li>
+                          <li><a href="#">Dịch vụ khách hàng </a></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- phần trên tiêu đề -->
+        <!-- logo tiêu đề -->
+        <div class="logo_section">
+           <div class="container">
+              <div class="row">
+                 <div class="col-sm-12">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                 </div>
+              </div>
+           </div> 
+        </div>
+    <div class="container">
+        <h1 class="page-title">Lịch Sử Mua Hàng</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Số điện thoại</th>
+                    <th>Tên món hàng</th>
+                    <th>Ngày mua</th>
+                    <th>Giá tiền</th>
+                </tr>
+            </thead>
+            <tbody id="order-history">
+                <!-- Lịch sử mua hàng sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer_section">
+        <ul>
+            <li><a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images/tiktok-icon.png" alt="TikTok"></a></li>
+        </ul>
+        <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
+    </div>
+
+    <!-- Script quản lý lịch sử mua hàng -->
+    <script>
+        // Dữ liệu mẫu: Lịch sử mua hàng
+        const orderHistory = [
+            {
+                orderId: "DH001",
+                customerName: "Nguyễn Văn A",
+                phone: "0123456789",
+                productName: "Nike React Element 87",
+                image:  "images/anh6.png" ,
+                purchaseDate: "2023-11-20",
+                price: 3800000
+            },
+            {
+                orderId: "DH002",
+                customerName: "Trần Thị B",
+                phone: "0987654321",
+                productName: "Adidas Yeezy Boost 350 V2",
+                image: "images/anh13.png",
+                purchaseDate: "2023-11-18",
+                price: 6000000
+            },
+            {
+                orderId: "DH003",
+                customerName: "Lê Văn C",
+                phone: "0934567890",
+                productName: "Converse x Off-White Chuck 70",
+                image: "images/anh11.png",
+                purchaseDate: "2023-11-15",
+                price: 8000000
+            }
+        ];
+
+        // Hàm hiển thị lịch sử mua hàng
+        function renderOrderHistory() {
+    const tableBody = document.getElementById("order-history");
+    tableBody.innerHTML = ""; // Xóa nội dung cũ
+
+    orderHistory.forEach(order => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${order.orderId}</td>
+            <td>${order.customerName}</td>
+            <td>${order.phone}</td>
+            <td>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${order.image}" alt="${order.productName}" style="width: 50px; height: 50px; border-radius: 5px;">
+                    <span>${order.productName}</span>
+                </div>
+            </td>
+            <td>${order.purchaseDate}</td>
+            <td>${order.price.toLocaleString()} VND</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+
+        // Gọi hàm để hiển thị lịch sử mua hàng khi tải trang
+        renderOrderHistory();
+    </script>
+</body>
+</html>

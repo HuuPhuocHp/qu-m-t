@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .payment-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .btn-pay {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-pay:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Trang Thanh Toán</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="customerName">Tên khách hàng:</label>
+                <input type="text" id="customerName" name="customerName" value="Hp" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" value="0346939331" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" value="Đường Trần Phú, Quận 1, TP.HCM" required>
+            </div>
+            <div class="form-group">
+                <label for="productName">Tên món hàng:</label>
+                <input type="text" id="productName" name="productName" value="Giày Nike Air Max" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Số tiền:</label>
+                <input type="number" id="amount" name="amount" value="35000000" required>
+            </div>
+            <button type="submit" class="btn-pay">Thanh Toán</button>
+        </form>
+    </div>
+</body>
+</html>

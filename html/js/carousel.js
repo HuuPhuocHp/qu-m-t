@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.querySelector("#jewellery_main_slider");
-  const indicators = document.querySelectorAll("#slide-indicator span");
-
-  if (carousel) {
-     // Cập nhật chỉ báo slide khi chuyển slide
-     carousel.addEventListener("slide.bs.carousel", function (event) {
-        indicators.forEach(indicator => indicator.classList.remove("active"));
-        indicators[event.to].classList.add("active");
-     });
-
-     // Xử lý khi nhấn vào số slide
-     indicators.forEach((indicator, index) => {
-        indicator.addEventListener("click", function () {
-           $(carousel).carousel(index);
-        });
-     });
-  }
+console.log("Carousel script is loaded and running!");
+// Đảm bảo document sẵn sàng
+$(document).ready(function() {
+    // Khi slide chuyển đổi, cập nhật chỉ mục
+    $('#jewellery_main_slider').on('slid.bs.carousel', function () {
+        var currentIndex = $('.carousel-inner .active').index();
+        $('#slide-indicator span').removeClass('active-slide');
+        $('#slide-indicator span').eq(currentIndex).addClass('active-slide');
+    });
+ 
+    // Hàm chuyển đến slide cụ thể
+    window.goToSlide = function(slideIndex) {
+        $('#jewellery_main_slider').carousel(slideIndex);
+        $('#slide-indicator span').removeClass('active-slide');
+        $('#slide-indicator span').eq(slideIndex).addClass('active-slide');
+    };
+ });
+ $('#slide-indicator span').click(function () {
+    var slideIndex = $(this).data('slide-to');
+    console.log("Slide index clicked: ", slideIndex);
+    $('#jewellery_main_slider').carousel(slideIndex);
 });
-
  

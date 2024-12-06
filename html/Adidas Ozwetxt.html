@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- thông tin cơ bản -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Eflyer</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- trang chủ -->
+      <div class="banner_bg_main">
+         <!-- header top section  -->
+         <div class="container">
+            <div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                        <ul>
+                           <li><a href="#">       </a></li>
+                           <li><a href="#">Bán chạy </a></li>
+                           <li><a href="#">Mẫu mới </a></li>
+                           <li><a href="#">Chương trình khuyến mãi </a></li>
+                           <li><a href="#">Dịch vụ khách hàng </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- phần trên tiêu đề -->
+         <!-- logo tiêu đề -->
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  </div>
+               </div>
+            </div> 
+         </div>
+         <!-- logo cuối-->
+         <!-- phần chú ý  -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <a href="Home.html">Trang chủ </a>
+                     <a href="Nike.html">Nike </a>
+                     <a href="Converse.html">Converse </a>
+                     <a href="Adidas.html">Adidas </a>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                  <div class="dropdown">
+                      
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               
+                     </div>
+                  </div>
+         <div class="main">
+            <div class="container"></div>
+            <title>Tìm kiếm nâng cao</title>
+            
+        
+        
+        <h1>Lọc sản phẩm</h1>
+        
+        <!-- Tìm kiếm nâng cao -->
+        <div class=" advanced-search" >
+            <label for="keyword">Từ khóa:</label>
+            <input type="text" id="keyword" placeholder="Nhập mục đích sử dụng">
+        
+            <label for="brand">Thương hiệu:</label>
+            <select id="brand">
+                <option value="">Tất cả</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Converse">Converse</option>
+            </select>
+        
+            <label for="price-range">Khoảng giá:</label>
+            <select id="price-range">
+                <option value="">Tất cả</option>
+                <option value="1000000-3000000">1 - 3 triệu</option>
+                <option value="3000000-5000000">3 - 5 triệu</option>
+                <option value="5000000-9000000">trên 5 triệu</option>
+            </select>
+        
+            <label for="type">Kiểu dáng:</label>
+            <select id="type">
+                <option value="">Tất cả</option>
+                <option value="high">Cổ cao</option>
+                <option value="low">Cổ ngắn</option>
+            </select>
+        
+            <button onclick="searchFunction()">Tìm kiếm</button>
+        </div>
+        
+        <!-- Tìm kiếm đơn giản -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm" id="searchInput">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" onclick="searchFunction()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hiển thị thông báo -->
+        <div style="text-align: center; margin-top: 10px;">
+            <p id="searchMessage" class="message"></p>
+        </div>
+        
+        <script>
+            function searchFunction() {
+                // Lấy giá trị từ các trường tìm kiếm nâng cao
+                const keyword = document.getElementById('keyword').value.trim();
+                const brand = document.getElementById('brand').value;
+                const priceRange = document.getElementById('price-range').value;
+                const type = document.getElementById('type').value;
+        
+                // Lấy giá trị từ trường tìm kiếm đơn giản
+                const searchInput = document.getElementById("searchInput").value.trim();
+        
+                // Lấy phần tử hiển thị thông báo
+                const messageElement = document.getElementById("searchMessage");
+        
+                // Kiểm tra nếu có từ khóa tìm kiếm hoặc tiêu chí lọc
+                if (searchInput || keyword || brand !== "" || priceRange !== "" || type !== "") {
+                    messageElement.textContent = "Tìm kiếm thành công!";
+                    messageElement.style.color = "green";  // Màu thông báo thành công
+                } else {
+                    messageElement.textContent = "Vui lòng nhập từ khóa ";
+                    messageElement.style.color = "red";  // Màu thông báo lỗi
+                }
+        
+                messageElement.style.display = "block"; // Hiển thị thông báo
+            }
+        </script>
+         </div>
+               </div>
+            </div>
+        
+                  <div class="header_box">
+                     <div class="lang_box ">
+                        
+                        
+                        <div class="dropdown-menu ">
+                           <a href="#" class="dropdown-item">
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
+                           </a>
+                        </div>
+                     </div>
+                     <div class="login_menu">
+                        <ul>
+                           <li class="cart">
+                           <a href="#">
+                              <a href = "giohang.html">
+                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              <span class="padding_10">Giỏ hàng </span></a>
+                           </li>
+                           
+                           <li class="login">
+                           <a href="#">
+                              <a href ="ls.html" >
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10"> Hp </span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <style>
+            /* Định dạng size và giá */
+            .size-price-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+                gap: 20px;
+            }
+            .size-options {
+                display: flex;
+                gap: 10px;
+            }
+            .size {
+                border: 1px solid #ddd;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            .size:hover {
+                background-color: #f26522;
+                color: #fff;
+                border-color: #f26522;
+            }
+            .price {
+                font-size: 18px;
+                font-weight: bold;
+                color: #f26522;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="page-title">Adidas Ozweego</h1>
+            <div class="product-image">
+                <img src="https://www.adidas.com.vn/dis/dw/image/v2/BBXQ_PRD/on/demandware.static/-/Sites-adidas-products/default/dw1831178f/zoom/2023_FY2820_00_plp_standard.jpg" alt="Adidas Superstar">
+                <img src="images/adidas-2.png" alt="Adidas Stan Smith">
+                <img src="images/adidas-3.png" alt="Adidas Ultraboost">
+               </div>
+            <div class="size-price-container">
+                <div class="size-options">
+                    <div class="size">39</div>
+                    <div class="size">40</div>
+                    <div class="size">41</div>
+                </div>
+                <div class="price">Giá: 2,600,000 VNĐ</div>
+            </div>
+            <p>
+                <strong>Adidas Ozweego</strong>là sự lựa chọn lý tưởng cho giới trẻ yêu thích phong cách chunky với thiết kế hiện đại, 
+                upper lưới thoáng khí, đế Adiprene giảm chấn tốt và đế ngoài cao su chống trượt. Mỗi mẫu giày đều mang đến trải nghiệm độc đáo, 
+                đáp ứng nhu cầu từ thời trang, vận động cho đến sự thoải mái trong cuộc sống thường ngày.
+        </div>
+      </div>
+   </div>
+</div>
+<!-- jewellery  section end -->
+<!-- footer section  -->
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+
+      <div class="footer_menu">
+         <ul>
+            <li><a href="https://www.facebook.com/tamnhu.trinh.587?mibextid=ZbWKwL" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com/fromyourearth?igsh=MXRuNWw0Ynp4Yjhhaw%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+          <li><a href="https://www.tiktok.com/@nhuu154?_t=8qX1tMNKtOM&_r=1" target="_blank"><img src="images/tiktok-icon.png" alt="TikTok"></a></li>
+         </ul>
+      </div>
+      <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
+   </div>
+</div>
+<!-- footer section end -->
+<!-- copyright section  -->
+<div class="copyright_section">
+   <div class="container">
+      <p class="copyright_text">Chân thành cảm ơn quý khách đã ủng hộ! </span></p>
+   </div>
+</div>
+<!-- copyright section end -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/carousel.js"></script>
+
+<!-- sidebar -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+   function openNav() {
+     document.getElementById("mySidenav").style.width = "250px";
+   }
+   
+   function closeNav() {
+     document.getElementById("mySidenav").style.width = "0";
+   }
+</script>
+
+</body>
+</html>
