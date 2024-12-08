@@ -238,7 +238,11 @@ button {
 .custom_menu {
     width: 100%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .custom_menu ul {
@@ -249,9 +253,15 @@ button {
 
 .custom_menu li {
     float: left;
+<<<<<<< HEAD
+    font-size: 20px;
+    color: #f1f1f1;
+    padding: 6px 35px 0px 35px;
+=======
     font-size: 16px;
     color: #f1f1f1;
     padding: 6px 10px 0px 10px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .custom_menu li a {
@@ -270,12 +280,20 @@ button {
 
 .logo_section {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .logo {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     text-align: center;
     padding: 30px 0px;
 }
@@ -347,10 +365,14 @@ button {
     order: 2;
 }
 
+<<<<<<< HEAD
+
+=======
 .header_box {
     order: 2;
     display: flex;
 }
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 
 .dropdown,
 .dropleft,
@@ -358,7 +380,11 @@ button {
 .dropup {
     position: relative;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     display: inline-block;
     margin-left: 30px;
     order: 2;
@@ -407,7 +433,11 @@ button {
     width: 2.375rem;
     height: 2.375rem;
     line-height: 2.375rem;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     pointer-events: none;
     color: #aaa;
 }
@@ -479,19 +509,29 @@ a:hover {
 
 .banner_section {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     padding-bottom: 60px;
 }
 
 .banner_taital {
     width: 100%;
     font-size: 60px;
+<<<<<<< HEAD
+    color: #0d0c0c;
+=======
     color: #ffffff;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
 .buynow_bt {
     width: 170px;
     margin: 0 auto;
@@ -515,6 +555,7 @@ a:hover {
     background-color: #f26522;
     color: #ffffff;
 }
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 
 #my_slider a.carousel-control-next {
     right: 0px;
@@ -560,7 +601,11 @@ a:hover {
     width: 100%;
     font-size: 40px;
     color: #30302e;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     font-weight: bold;
 }
 
@@ -582,7 +627,11 @@ a:hover {
     width: 100%;
     font-size: 20px;
     color: #30302e;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     font-weight: bold;
     padding-bottom: 5px;
 }
@@ -591,13 +640,21 @@ a:hover {
     width: 100%;
     font-size: 16px;
     color: #f26522;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 0px;
 }
 
 .tshirt_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 370px;
 }
@@ -681,7 +738,11 @@ a:hover {
 
 .electronic_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 293px;
 }
@@ -728,7 +789,11 @@ a:hover {
 
 .jewellery_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 293px;
 }
@@ -766,7 +831,11 @@ a:hover {
 
 .loader_main {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin-top: 140px;
 }
 
@@ -823,13 +892,21 @@ a:hover {
 
 .footer_logo {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .input_bt {
     width: 60%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     display: flex;
     border-bottom: 1px solid #ffffff !important;
 }
@@ -873,7 +950,11 @@ input.mail_bt::placeholder {
 .footer_menu {
     width: 100%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .footer_menu ul {
@@ -901,7 +982,11 @@ input.mail_bt::placeholder {
     width: 100%;
     margin: 0 auto;
     padding-top: 30px;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .location_main {
@@ -937,7 +1022,11 @@ input.mail_bt::placeholder {
     float: left;
     color: #ffffff;
     text-align: center;
+<<<<<<< HEAD
+    font-size: 30px;
+=======
     font-size: 16px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 20px 0px;
 }
 
@@ -954,6 +1043,8 @@ input.mail_bt::placeholder {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -963,6 +1054,7 @@ input.mail_bt::placeholder {
 
 
 
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 /* copyright section end */
 /* CSS cho Giỏ hàng */
 .login_menu .cart a {
@@ -981,6 +1073,37 @@ input.mail_bt::placeholder {
 .login_menu .login a:hover {
     color: #f26522; /* Màu cam khi di chuột qua Đăng nhập */
 }
+<<<<<<< HEAD
+/*hiển thị số */
+.carousel-controls {
+    display: flex; /* Sử dụng flexbox để căn chỉnh hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: relative; /* Để sử dụng cho vị trí tuyệt đối của số */
+    margin-top: -30px; /* Điều chỉnh để số nằm ở giữa mũi tên */
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px; /* Kích thước chữ cho số thứ tự */
+    z-index: 10; /* Đảm bảo số thứ tự không bị che khuất */
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 3000%; /* Điều chỉnh theo nhu cầu */
+    transform: translateY(-50%); /* Giúp mũi tên canh giữa theo chiều dọc */
+}
+.banner_taital {
+    font-family: 'Roboto', cursive; /* Chọn phông chữ theo ý muốn, ví dụ Roboto */
+    font-size: 36px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+    color: #000; /* Màu chữ */
+    text-align: center; /* Canh giữa chữ */
+=======
 
 .font-weight-bold {
     font-weight: bold; /* Đảm bảo rằng lớp này định nghĩa độ đậm */
@@ -1336,11 +1459,14 @@ input.mail_bt::placeholder {
      flex-direction: column;
      text-align: center;
      min-height: 150px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 
 
 
+<<<<<<< HEAD
+=======
 .activeB
 {
      display: none;
@@ -1358,3 +1484,4 @@ input.mail_bt::placeholder {
     font-size: 16px;
     font-weight: bold;
 }
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
