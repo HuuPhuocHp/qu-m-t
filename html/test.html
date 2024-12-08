@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Quản Lý Shop Giày</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            height: 100vh;
+            position: fixed;
+            color: #fff;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #555;
+        }
+        .container {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .product-form input, .product-form button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .product-list table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .product-list th, .product-list td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Quản Lý Shop Giày</h2>
+        <a href="#add-product">Thêm Sản Phẩm</a>
+        <a href="#product-list">Danh Sách Sản Phẩm</a>
+        <a href="#revenue">Doanh Thu</a>
+    </div>
+
+    <div class="container">
+        <h1>Trang Quản Lý</h1>
+
+        <!-- Phần thêm sản phẩm -->
+        <div id="add-product" class="section product-form">
+            <h2>Thêm Sản Phẩm</h2>
+            <input type="text" placeholder="Tên sản phẩm" id="product-name">
+            <input type="number" placeholder="Giá sản phẩm" id="product-price">
+            <input type="text" placeholder="Mô tả sản phẩm" id="product-description">
+            <button onclick="addProduct()">Thêm Sản Phẩm</button>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="product-list" class="section product-list">
+            <h2>Danh Sách Sản Phẩm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Giá</th>
+                        <th>Mô Tả</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Giày Thể Thao Nam</td>
+                        <td>500,000 VND</td>
+                        <td>Giày thể thao cho nam</td>
+                        <td>
+                            <button onclick="editProduct(1)">Chỉnh Sửa</button>
+                            <button onclick="deleteProduct(1)">Xóa</button>
+                        </td>
+                    </tr>
+                    <!-- Thêm nhiều sản phẩm khác -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Doanh thu -->
+        <div id="revenue" class="section chart-container">
+            <h2>Doanh Thu</h2>
+            <canvas id="revenueChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Hàm thêm sản phẩm mới vào bảng sản phẩm (giả lập)
+        function addProduct() {
+            const name = document.getElementById('product-name').value;
+            const price = document.getElementById('product-price').value;
+            const description = document.getElementById('product-description').value;
+            const tableBody = document.getElementById('product-table-body');
+
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>2</td><td>${name}</td><td>${price} VND</td><td>${description}</td><td><button onclick="editProduct(2)">Chỉnh Sửa</button><button onclick="deleteProduct(2)">Xóa</button></td>`;
+            tableBody.appendChild(row);
+        }
+
+        // Hàm xóa sản phẩm
+        function deleteProduct(id) {
+            alert('Xóa sản phẩm ' + id);
+            // Thêm logic để xóa sản phẩm ở đây
+        }
+
+        // Hàm chỉnh sửa sản phẩm
+        function editProduct(id) {
+            alert('Chỉnh sửa sản phẩm ' + id);
+            // Thêm logic để chỉnh sửa sản phẩm ở đây
+        }
+
+        // Dữ liệu biểu đồ doanh thu
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'],
+                datasets: [{
+                    label: 'Doanh thu (triệu VND)',
+                    data: [10, 20, 15, 25, 30, 35],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

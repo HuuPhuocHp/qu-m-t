@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Đơn Hàng</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .order-details {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-table th, .product-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .product-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .btn-back {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-back:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-details">
+        <h1>Chi Tiết Đơn Hàng</h1>
+        <p><strong>Mã đơn hàng:</strong> #004</p>
+        <p><strong>Khách hàng:</strong> Nguyễn Thị Kim Thoa</p>
+        <p><strong>Ngày tạo:</strong> 2024-11-18</p>
+        <p><strong>Số điện thoại khách hàng:</strong> 08145135474</p>
+        <p><strong>Địa chỉ:</strong> Lý Thường Kiệt, Phường 9, Quận Tân Bình, TPHCM</p>
+        <p><strong>Danh sách sản phẩm:</strong></p>
+        <table class="table product-table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/anh15.png" alt="Adidas Gazellel" class="product-image"></td>
+                    <td>Adidas Gazelle</td>
+                    <td>1</td>
+                    <td>39</td>
+                </tr>
+                <tr>
+                    <td><img src="images/anh16.png" alt="Adidas NMD R1" class="product-image"></td>
+                    <td>Adidas NMD R1</td>
+                    <td>1</td>
+                    <td>40</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Tổng tiền:</strong> 5,100,000 VND</p>
+        <p><strong>Trạng thái:</strong> Chờ xử lý</p>
+        <a href="QLDH.html" class="btn-back">Quay lại</a>
+    </div>
+</body>
+</html>

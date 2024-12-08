@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Đơn Hàng Đã Mua</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        .product-table td, .product-table th {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center">Danh Sách Đơn Hàng Đã Mua</h1>
+        <div class="table-container">
+            <!-- Bảng hiển thị đơn hàng -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Sản Phẩm</th>
+                        <th>Số Lượng</th>
+                        <th>Giá Tiền</th>
+                        <th>Tổng Tiền</th>
+                        <th>Trạng Thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu đơn hàng mẫu -->
+                    <tr>
+                        <td>#001</td>
+                        <td>
+                            <ul>
+                                <li>Adidas Superstar</li>
+                                <li>Nike Air Force 1</li>
+                            </ul>
+                        </td>
+                        <td>3</td>
+                        <td>1,000,000 VND</td>
+                        <td>3,000,000 VND</td>
+                        <td>Đang xử lý</td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>
+                            <ul>
+                                <li>Converse Chuck Taylor All Sta</li>
+                                <li>Vans Old Skool</li>
+                            </ul>
+                        </td>
+                        <td>4</td>
+                        <td>500,000 VND</td>
+                        <td>2,000,000 VND</td>
+                        <td>Đang giao</td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>
+                            <ul>
+                                <li>SPuma Suede Classic</li>
+                            </ul>
+                        </td>
+                        <td>1</td>
+                        <td>1,500,000 VND</td>
+                        <td>1,500,000 VND</td>
+                        <td>Đã hoàn thành</td>
+                    </tr>
+                    <tr>
+                        <td>#004</td>
+                        <td>
+                            <ul>
+                                <li>Reebok Club C 85</li>
+                                <li>New Balance 574</li>
+                            </ul>
+                        </td>
+                        <td>4</td>
+                        <td>600,000 VND</td>
+                        <td>2,400,000 VND</td>
+                        <td>Đã hủy</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
