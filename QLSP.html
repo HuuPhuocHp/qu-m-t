@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- thông tin cơ bản -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Admin</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- trang chủ -->
+      <div class="banner_bg_main">
+         <!-- header top section  -->
+         <div class="container">
+            <div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                        <ul>
+                           <li><a href="#">       </a></li>
+                           <li><a href="#">Bán chạy </a></li>
+                           <li><a href="#">Mẫu mới </a></li>
+                           <li><a href="#">Chương trình khuyến mãi </a></li>
+                           <li><a href="#">Dịch vụ khách hàng </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- phần trên tiêu đề -->
+         <!-- logo tiêu đề -->
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  </div>
+               </div>
+            </div> 
+         </div>
+         <!-- logo cuối-->
+         <!-- phần chú ý  -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <a href="Admin.html">Trang chủ </a>
+                     <a href="QLSP.html"> Quản lý sản phẩm</a>
+                     <a href="QLDH.html"> Quản lý đơn hàng</a>
+                     <a href="QLKH.html"> Quản lý khách hàng</a>
+                     <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Thống kê <span class="arrow"></span></a>
+                        <div class="dropdown-menu">
+                            <a href="sp.html">Sản phẩm</a>
+                            <a href="kh.html">Khách hàng</a>
+                        </div>
+                    </div>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                  <div class="dropdown">
+                      
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        
+                     </div>
+                  </div>
+                  <style>
+                     .dropdown {
+                     position: relative;
+                     display: inline-block;
+                  }
+ 
+                  .dropdown .dropdown-menu {
+                     display: none; /* Ban đầu ẩn */
+                     position: absolute;
+                     left: 0;
+                     background-color: #f9f9f9;
+                     min-width: 160px;
+                     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                     z-index: 1;
+                     border-radius: 5px; /* Bo góc */
+                  }
+ 
+                  .dropdown .dropdown-menu a {
+                     color: #000; /* Màu chữ đen */
+                     padding: 12px 16px;
+                     text-decoration: none;
+                     display: block;
+                  }
+ 
+                  .dropdown .dropdown-menu a:hover {
+                     background-color: #ddd;
+                  }
+ 
+                  .dropdown .arrow {
+                     font-size: 0.9rem;
+                     margin-left: 8px;
+                     cursor: pointer;
+                  }
+ 
+                 </style>
+                 <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                  const dropdown = document.querySelector(".dropdown");
+ 
+                  dropdown.addEventListener("click", function () {
+                     const menu = this.querySelector(".dropdown-menu");
+                     const isMenuVisible = menu.style.display === "block";
+                     
+                     // Tắt các dropdown khác nếu cần (optional)
+                     document.querySelectorAll(".dropdown-menu").forEach((m) => {
+                           m.style.display = "none";
+                     });
+ 
+                     // Hiển thị hoặc ẩn menu
+                     menu.style.display = isMenuVisible ? "none" : "block";
+                  });
+               });
+            </script>
+                  <div class="main">
+                     <!-- Another variation with a button -->
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm ">
+                        <div class="input-group-append">
+                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                           <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_box">
+                     <div class="lang_box ">
+                        
+                        
+                        <div class="dropdown-menu ">
+                           <a href="#" class="dropdown-item">
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
+                           </a>
+                        </div>
+                     </div>
+                     <div class="login_menu">
+                        <ul>
+                           </li>
+                           <li class="login">
+                           <a href="#">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10">Admin </span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header section end -->
+         <!-- biểu ngữ bắt đầu -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="my_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                           
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                             
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm - Shop Giày Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            margin-top: 20px;
+        }
+        .action-btn {
+            margin: 5px;
+        }
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .preview-image {
+            max-width: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+        .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    /* css phân trang*/
+      .pagination-btn {
+         border: 1px solid #ddd;
+         padding: 8px 12px;
+         margin: 0 5px;
+         cursor: pointer;
+         color: #007bff;
+         background-color: #fff;
+         border-radius: 5px;
+      }
+
+      .pagination-btn.active {
+         background-color: #007bff;
+         color: white;
+         pointer-events: none;
+      }
+
+      .pagination-btn:hover:not(.active) {
+         background-color: #e9ecef;
+      }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center">Quản Lý Sản Phẩm</h1>
+
+    <div class="container">
+        <!-- Thêm Sản Phẩm -->
+        <a href="Add.html" class="btn btn-primary">Thêm Sản Phẩm Mới</a>
+
+
+<!-- Bảng Quản Lý Sản Phẩm -->
+<table class="table table-striped" id="product-table">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Size</th>
+            <th>Mô tả</th>
+            <th>Hình ảnh</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Dữ liệu sản phẩm mẫu -->
+        <tr>
+            <td>Adidas Superstar</td>
+            <td>2,000,000 VND</td>
+            <td>39</td>
+            <td>Giày thể thao phong cách cổ điển.</td>
+            <td><img src="images/jhumka-img.png" alt="Adidas Superstar" width="80" height="80"></td>
+            <td>
+               <a href="edit.html" class="btn btn-info">Chỉnh sửa</a>
+                <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Nike Air Force 1</td>
+            <td>3,000,000 VND</td>
+            <td>40</td>
+            <td>Giày thể thao với thiết kế tối giản.</td>
+            <td><img src="images/anh4.png" alt="Nike Air Force 1" width="80" height="80"></td>
+            <td>
+               <a href="edit2.html" class="btn btn-info">Chỉnh sửa</a>
+                <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Converse Chuck Taylor All Star</td>
+            <td>1,500,000 VND</td>
+            <td>38</td>
+            <td>Giày sneaker kinh điển từ Converse.</td>
+            <td><img src="images/anh11.png" alt="Converse Chuck Taylor All Star" width="80" height="80"></td>
+            <td>
+               <a href="edit3.html" class="btn btn-info">Chỉnh sửa</a>
+                <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+            </td>
+        </tr>
+        <tr>
+         <td>Vans Old Skool</td>
+         <td>1,800,000 VND</td>
+         <td>41</td>
+         <td>Giày vải cổ điển, phù hợp mọi phong cách.</td>
+         <td><img src="images/anh15.png" alt="Vans Old Skool" width="80" height="80"></td>
+         <td>
+            <a href="edit4.html" class="btn btn-info">Chỉnh sửa</a>
+             <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+         </td>
+     </tr>
+     <tr>
+         <td>Puma Suede Classic</td>
+         <td>2,100,000 VND</td>
+         <td>42</td>
+         <td>Giày thể thao suede nổi bật.</td>
+         <td><img src="images/anh16.png" alt="Puma Suede Classic" width="80" height="80"></td>
+         <td>
+            <a href="edit5.html" class="btn btn-info">Chỉnh sửa</a>
+             <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+         </td>
+     </tr>
+     <tr>
+         <td>Reebok Club C 85</td>
+         <td>2,300,000 VND</td>
+         <td>43</td>
+         <td>Giày thể thao cổ điển, bền bỉ.</td>
+         <td><img src="images/anh2.png" alt="Reebok Club C 85" width="80" height="80"></td>
+         <td>
+            <a href="edit6.html" class="btn btn-info">Chỉnh sửa</a>
+             <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+         </td>
+     </tr>
+     <tr>
+         <td>New Balance 574</td>
+         <td>2,500,000 VND</td>
+         <td>40</td>
+         <td>Giày chạy bộ với đệm êm ái.</td>
+         <td><img src="images/anh3.png" alt="New Balance 574" width="80" height="80"></td>
+         <td>
+            <a href="edit7.html" class="btn btn-info">Chỉnh sửa</a>
+             <button class="btn btn-danger" onclick="deleteProduct(this)">Xóa</button>
+         </td>
+     </tr>
+    </tbody>
+    <script>
+      // Hàm xử lý sự kiện xóa sản phẩm
+      function deleteProduct(button) {
+          // Hiển thị thông báo xác nhận
+          const confirmDelete = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+          if (confirmDelete) {
+              // Nếu người dùng nhấn OK, hiện thông báo xóa thành công
+              alert("Xóa sản phẩm thành công!");
+          } else {
+              // Nếu nhấn Cancel, không thực hiện hành động nào
+              console.log("Hủy xóa sản phẩm");
+          }
+      }
+    function goToPage(pageNumber) {
+        // Thực tế bạn có thể chèn logic điều hướng hoặc tải lại trang
+        window.location.href = "QLSP.html"; // Thay bằng URL của trang đầu
+    }
+</script>
+
+   </script>
+</table>
+<div id="pagination" class="pagination-container">
+   <button class="pagination-btn" onclick="goToPage(1)">1</button>
+   <button class="pagination-btn" onclick="goToPage(2)">2</button>
+   <button class="pagination-btn" onclick="goToPage(3)">3</button>
+   <span class="pagination-btn">...</span> <!-- Ba dấu chấm -->
+   <button class="pagination-btn" onclick="goToPage(6)">6</button>
+</div>
+
+
+</body>
+</html>
+</div>
+<div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+   <div class="carousel-inner">
+      <!-- Nội dung slide -->
+   </div>
+</div>
+</div>
+</div>
+<!-- jewellery  section end -->
+<!-- footer section  -->
+<div class="footer_section layout_padding">
+<div class="container">
+<div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+<div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
+</div>
+</div>
+<!-- footer section end -->
+<!-- copyright section  -->
+<div class="copyright_section">
+<div class="container">
+<p class="copyright_text">Chân thành cảm ơn quý khách đã ủng hộ! </span></p>
+</div>
+</div>
+<!-- copyright section end -->
+<!-- Javascript files-->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/plugin.js"></script>
+<!-- sidebar -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
+    
+

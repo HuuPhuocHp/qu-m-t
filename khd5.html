@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa Đơn Của Khách Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .btn {
+            padding: 5px 10px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hóa Đơn Của Khách Hàng</h1>
+        
+        <h2 id="customer-name">Khách Hàng: Nguyễn Văn An</h2> <!-- Dữ liệu mẫu được hiển thị ở đây -->
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã Hóa Đơn</th>
+                    <th>Mặt Hàng</th>
+                    <th>Ngày Mua</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng Tiền</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-table">
+                <!-- Dữ liệu hóa đơn sẽ được thêm qua JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="4">Tổng Cộng</td>
+                    <td id="total-amount">0 VND</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="btn" onclick="goBack()">Quay Lại</button>
+    </div>
+
+    <script>
+        // Dữ liệu mẫu cho hóa đơn của khách hàng
+        const data = {
+            "Nguyễn Văn An": [
+                { id: "#001", product: "Nike", date: "2024-12-01", quantity: 2, total: 5000000 },
+                { id: "#004", product: "Adidas", date: "2024-12-06", quantity: 1, total: 3000000 },
+                { id: "#007", product: "Nike", date: "2024-12-08", quantity: 3, total: 7500000 },
+                { id: "#010", product: "Adidas", date: "2024-12-09", quantity: 2, total: 6000000 },
+                { id: "#013", product: "Converse", date: "2024-12-10", quantity: 1, total: 2500000 }
+            ],
+            "Trần Thị Ngọc Ánh": [
+                { id: "#002", product: "Converse", date: "2024-12-03", quantity: 1, total: 2500000 },
+                { id: "#005", product: "Nike", date: "2024-12-07", quantity: 4, total: 10000000 },
+                { id: "#008", product: "Adidas", date: "2024-12-11", quantity: 2, total: 6000000 },
+                { id: "#011", product: "Nike", date: "2024-12-12", quantity: 1, total: 2500000 },
+                { id: "#014", product: "Adidas", date: "2024-12-13", quantity: 3, total: 9000000 }
+            ],
+            "Hoàng Văn Dũng": [
+                { id: "#003", product: "Adidas", date: "2024-12-05", quantity: 3, total: 7500000 },
+                { id: "#006", product: "Nike", date: "2024-12-08", quantity: 2, total: 5000000 },
+                { id: "#009", product: "Converse", date: "2024-12-12", quantity: 1, total: 2500000 },
+                { id: "#012", product: "Adidas", date: "2024-12-15", quantity: 4, total: 14200000 },
+                { id: "#015", product: "Nike", date: "2024-12-16", quantity: 3, total: 7500000 }
+            ]
+        };
+
+        // Hàm lấy tên khách hàng từ URL (hoặc sử dụng mặc định là "Nguyễn Văn An")
+        function getCustomerName() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get("customer") || "Hoàng Văn Dũng"; // Nếu không có tham số, mặc định là Nguyễn Văn An
+        }
+
+        // Hàm hiển thị danh sách hóa đơn của khách hàng, tối đa 5 hóa đơn
+        function displayInvoices() {
+            const customerName = getCustomerName();
+            const customerInvoices = data[customerName] || [];
+            const tableBody = document.getElementById("invoice-table");
+            const customerNameHeader = document.getElementById("customer-name");
+
+            customerNameHeader.textContent = `Khách Hàng: ${customerName}`;
+
+            // Chỉ hiển thị tối đa 5 hóa đơn
+            const invoicesToDisplay = customerInvoices.slice(0, 5);
+            let totalAmount = 0;
+
+            invoicesToDisplay.forEach(invoice => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${invoice.id}</td>
+                    <td>${invoice.product}</td>
+                    <td>${invoice.date}</td>
+                    <td>${invoice.quantity}</td>
+                    <td>${invoice.total.toLocaleString()} VND</td>
+                `;
+                tableBody.appendChild(row);
+
+                totalAmount += invoice.total;
+            });
+
+            // Cập nhật tổng cộng
+            document.getElementById("total-amount").textContent = totalAmount.toLocaleString() + " VND";
+
+            // Nếu không có hóa đơn nào
+            if (invoicesToDisplay.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="5">Không có hóa đơn nào cho khách hàng này.</td></tr>`;
+            }
+        }
+
+        // Hàm quay lại trang trước
+        function goBack() {
+            window.history.back();
+        }
+
+        // Gọi hàm để hiển thị dữ liệu khi tải trang
+        displayInvoices();
+    </script>
+</body>
+</html>

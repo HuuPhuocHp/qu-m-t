@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm Bán Chạy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .table-container {
+            margin-top: 30px;
+        }
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .btn-view-details {
+            background-color: #f26522;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-view-details:hover {
+            background-color: #e25416;
+        }
+        .text-right {
+            text-align: right; /* Căn nội dung về bên phải */
+        }
+
+        .btn-back {
+            background-color: #6c757d; /* Màu xám */
+            color: white; /* Chữ màu trắng */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-back:hover {
+            background-color: #5a6268; /* Màu đậm hơn khi hover */
+            color: white;
+        }
+        /* css phân trang*/
+        .pagination-container {
+            text-align: center; /* Căn giữa */
+            margin-top: 20px; /* Khoảng cách phía trên */
+            margin-bottom: 20px; /* Khoảng cách phía dưới */
+            display: flex; /* Sử dụng Flexbox */
+            justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+            align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+        }
+        .pagination-btn {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            margin: 0 5px;
+            cursor: pointer;
+            color: #007bff;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .pagination-btn.active {
+            background-color: #007bff;
+            color: white;
+            pointer-events: none;
+        }
+        .pagination-btn:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+
+    </style>
+</head>
+<body>
+        <h1 class="text-center">Sản Phẩm Bán Chạy</h1>
+        <!-- Bảng sản phẩm bán chạy -->
+        <div class="table-container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Hình Ảnh</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Số Lượng Đã Bán</th>
+                        <th>Giá</th>
+                        <th>Tổng Tiền</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sản phẩm mẫu -->
+                    <tr>
+                        <td><img src="images/jhumka-img.png" alt="Adidas Superstar" class="product-image"></td>
+                        <td>Adidas Superstar</td>
+                        <td>10</td>
+                        <td>2,000,000 VND</td>
+                        <td>20,000,000 VND</td>
+                        <td><a href="sp1.html" class="btn-view-details">Xem Chi Tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/anh4.png" alt="Nike Air Force 1" class="product-image"></td>
+                        <td>Nike Air Force 1</td>
+                        <td>12</td>
+                        <td>3,000,000 VND</td>
+                        <td>36,000,000 VND</td>
+                        <td><a href="sp2.html" class="btn-view-details">Xem Chi Tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/anh11.png" alt="Converse Chuck Taylor All Star" class="product-image"></td>
+                        <td>Converse Chuck Taylor All Star</td>
+                        <td>13</td>
+                        <td>1,500,000 VND</td>
+                        <td>18,000,000 VND</td>
+                        <td><a href="sp3.html" class="btn-view-details">Xem Chi Tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/anh15.png" alt="Vans Old Skool" class="product-image"></td>
+                        <td>Vans Old Skool</td>
+                        <td>14</td>
+                        <td>1,800,000 VND</td>
+                        <td>25,200,000 VND</td>
+                        <td><a href="sp4.html" class="btn-view-details">Xem Chi Tiết</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/anh16.png" alt="Puma Suede Classic" class="product-image"></td>
+                        <td>Puma Suede Classic</td>
+                        <td>16</td>
+                        <td>2,100,000 VND</td>
+                        <td>33,600,000 VND</td>
+                        <td><a href="sp5.html" class="btn-view-details">Xem Chi Tiết</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right mt-3">
+                <a href="Admin.html" class="btn btn-secondary btn-back">Quay Lại</a>
+            </div>
+            <div id="pagination" class="pagination-container">
+                <button class="pagination-btn" onclick="goToPage(1)">1</button>
+                <button class="pagination-btn" onclick="goToPage(2)">2</button>
+                <button class="pagination-btn" onclick="goToPage(3)">3</button>
+                <span class="pagination-btn">...</span> <!-- Ba dấu chấm -->
+                <button class="pagination-btn" onclick="goToPage(6)">6</button>
+             </div>
+        </div>
+    </div>
+<script>
+  function goToPage(pageNumber) {
+        // Thực tế bạn có thể chèn logic điều hướng hoặc tải lại trang
+        window.location.href = "sp.html"; // Thay bằng URL của trang đầu
+    }
+</script>
+</body>
+</html>

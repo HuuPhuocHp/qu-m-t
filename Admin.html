@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- thông tin cơ bản -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Admin</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   </head>
+   <body>
+      <!-- trang chủ -->
+      <div class="banner_bg_main">
+         <!-- header top section  -->
+         <div class="container">
+            <div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                        <ul>
+                           <li><a href="#">       </a></li>
+                           <li><a href="#">Bán chạy </a></li>
+                           <li><a href="#">Mẫu mới </a></li>
+                           <li><a href="#">Chương trình khuyến mãi </a></li>
+                           <li><a href="#">Dịch vụ khách hàng </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- phần trên tiêu đề -->
+         <!-- logo tiêu đề -->
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  </div>
+               </div>
+            </div> 
+         </div>
+         <!-- logo cuối-->
+         <!-- phần chú ý  -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <a href="Admin.html">Trang chủ </a>
+                     <a href="QLSP.html"> Quản lý sản phẩm</a>
+                     <a href="QLDH.html"> Quản lý đơn hàng</a>
+                     <a href="QLKH.html"> Quản lý khách hàng</a>
+                     <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">Thống kê <span class="arrow"></span></a>
+                        <div class="dropdown-menu">
+                            <a href="sp.html">Sản phẩm</a>
+                            <a href="kh.html">Khách hàng</a>
+                        </div>
+                    </div>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                  <div class="dropdown">
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        
+                     </div>
+                  </div>
+                  <style>
+                     .dropdown {
+                     position: relative;
+                     display: inline-block;
+                  }
+
+                  .dropdown .dropdown-menu {
+                     display: none; /* Ban đầu ẩn */
+                     position: absolute;
+                     left: 0;
+                     background-color: #f9f9f9;
+                     min-width: 160px;
+                     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                     z-index: 1;
+                     border-radius: 5px; /* Bo góc */
+                  }
+
+                  .dropdown .dropdown-menu a {
+                     color: #000; /* Màu chữ đen */
+                     padding: 12px 16px;
+                     text-decoration: none;
+                     display: block;
+                  }
+
+                  .dropdown .dropdown-menu a:hover {
+                     background-color: #ddd;
+                  }
+
+                  .dropdown .arrow {
+                     font-size: 0.9rem;
+                     margin-left: 8px;
+                     cursor: pointer;
+                  }
+
+                 </style>
+                 <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                  const dropdown = document.querySelector(".dropdown");
+
+                  dropdown.addEventListener("click", function () {
+                     const menu = this.querySelector(".dropdown-menu");
+                     const isMenuVisible = menu.style.display === "block";
+                     
+                     // Tắt các dropdown khác nếu cần (optional)
+                     document.querySelectorAll(".dropdown-menu").forEach((m) => {
+                           m.style.display = "none";
+                     });
+
+                     // Hiển thị hoặc ẩn menu
+                     menu.style.display = isMenuVisible ? "none" : "block";
+                  });
+               });
+            </script>
+                  <div class="main">
+                     <!-- Another variation with a button -->
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm ">
+                        <div class="input-group-append">
+                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                           <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_box">
+                     <div class="lang_box ">
+                        <div class="dropdown-menu ">
+                           <a href="#" class="dropdown-item">
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
+                           </a>
+                        </div>
+                     </div>
+                     <div class="login_menu">
+                        <ul>
+                           </li>
+                           <li class="login">
+                           <a href="#">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10">Admin </span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header section end -->
+         <!-- biểu ngữ bắt đầu -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="my_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                           
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                             
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                             
+                           </div>
+                        </div>
+                     </div>
+         <title>Thống Kê Kinh Doanh</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Chèn file CSS nếu có -->
+    <style>
+        /* CSS cơ bản */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .btn {
+            padding: 6px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .section-header {
+            font-size: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .filter-form label {
+            margin-right: 10px;
+        }
+        .filter-form input, .filter-form select {
+            padding: 5px;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="text-center">Thống Kê Tình Hình Kinh Doanh</h1>
+
+<div class="container">
+
+    <!-- Form lọc theo thời gian -->
+    <div class="filter-form">
+        <label for="start-date">Từ ngày:</label>
+        <input type="date" id="start-date">
+
+        <label for="end-date">Đến ngày:</label>
+        <input type="date" id="end-date">
+
+        <button class="btn" onclick="filterData()">Lọc</button>
+    </div>
+
+      <!-- Thống kê theo mặt hàng -->
+      <div id="statistics-by-product">
+         <h2 class="section-header">Thống Kê Theo Mặt Hàng</h2>
+         <table id="product-table">
+               <thead>
+                  <tr>
+                     <th>Mặt Hàng</th>
+                     <th>Số Lượng Bán</th>
+                     <th>Tổng Tiền Thu Được</th>
+                     <th>Chi Tiết</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <!-- Các dòng dữ liệu sẽ được thêm vào qua JavaScript -->
+               </tbody>
+         </table>
+         <div id="total-revenue">
+               <strong>Tổng Thu: <span id="total-revenue-amount">0 VND</span></strong>
+         </div>
+         <!-- Bảng sản phẩm bán chạy -->
+<h2 class="section-header">Sản Phẩm Bán Chạy Nhất</h2>
+<table id="top-selling-products">
+    <thead>
+        <tr>
+            <th>Tên Sản Phẩm</th>
+            <th>Số Lượng Bán</th>
+            <th>Tổng Tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Các dòng dữ liệu sẽ được thêm vào qua JavaScript -->
+    </tbody>
+</table>
+
+<!-- Bảng sản phẩm bán ế -->
+<h2 class="section-header">Sản Phẩm Bán Ế Nhất</h2>
+<table id="worst-selling-products">
+    <thead>
+        <tr>
+            <th>Tên Sản Phẩm</th>
+            <th>Số Lượng Bán</th>
+            <th>Tổng Tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Các dòng dữ liệu sẽ được thêm vào qua JavaScript -->
+    </tbody>
+</table>
+
+      <!-- Thống kê theo khách hàng -->
+      <div id="statistics-by-customer">
+         <h2 class="section-header">Thống Kê Theo Khách Hàng</h2>
+            <h3>5 Khách Hàng Có Doanh Thu Cao Nhất:</h3>
+         <table id="customer-table">
+               <thead>
+                  <tr>
+                     <th>Khách Hàng</th>
+                     <th>Tổng Doanh Thu</th>
+                     <th>Chi Tiết</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <!-- Các dòng dữ liệu sẽ được thêm vào qua JavaScript -->
+               </tbody>
+         </table>
+      </div>
+
+   </div>
+                     </script>
+                  </body>
+                  </html>
+               <script> 
+                  const data = {
+                        products: [
+                              { name: "Nike", sold: 15, revenue: 44500000 },
+                              { name: "Converse", sold: 14, revenue: 37500000 },
+                              { name: "Adidas", sold: 13, revenue: 35700000 }
+                        ],
+                        customers: [
+                              { name: "Nguyễn Văn An", revenue: 15000000, orders: [1, 3] },
+                              { name: "Trần Thị Ngọc Ánh", revenue: 12000000, orders: [2] },
+                              { name: "Phạm Quang Vũ", revenue: 10000000, orders: [4] },
+                              { name: "Lê Thị Hồng", revenue: 8000000, orders: [5] },
+                              { name: "Hoàng Văn Dũng", revenue: 7000000, orders: [6] },
+                        ],
+                     };
+                  // Dữ liệu mẫu cho sản phẩm bán chạy và bán ế
+                  const topSellingProducts = [
+                     { name: "Nike Air Force 1 Low", sold: 8, revenue: 16800000 },
+                     { name: "Adidas Superstar", sold: 8, revenue: 16000000 },
+                  ];
+
+                  const worstSellingProducts = [
+                     { name: "Converse Weapon CX", sold: 0, revenue: 0 },
+                     { name: "Adidas Ozweego", sold: 0, revenue: 0 },
+                  ];
+                  // Hàm để hiển thị sản phẩm bán chạy
+                     function showTopSellingProducts() {
+                        const topSellingTableBody = document.getElementById('top-selling-products').getElementsByTagName('tbody')[0];
+                        
+                        topSellingProducts.forEach(product => {
+                           let row = topSellingTableBody.insertRow();
+                           row.innerHTML = `
+                                 <td>${product.name}</td>
+                                 <td>${product.sold}</td>
+                                 <td>${product.revenue.toLocaleString()} VND</td>
+                           `;
+                        });
+                     }
+
+                     // Hàm để hiển thị sản phẩm bán ế
+                     function showWorstSellingProducts() {
+                        const worstSellingTableBody = document.getElementById('worst-selling-products').getElementsByTagName('tbody')[0];
+                        
+                        worstSellingProducts.forEach(product => {
+                           let row = worstSellingTableBody.insertRow();
+                           row.innerHTML = `
+                                 <td>${product.name}</td>
+                                 <td>${product.sold}</td>
+                                 <td>${product.revenue.toLocaleString()} VND</td>
+                           `;
+                        });
+                     }
+
+                     // Hiển thị sản phẩm bán chạy và bán ế khi trang tải
+                     document.addEventListener("DOMContentLoaded", function() {
+                        showTopSellingProducts();
+                        showWorstSellingProducts();
+                     });
+                  // Hàm để hiển thị thống kê theo mặt hàng
+                  function showProductStatistics() {
+                     const productTableBody = document.getElementById('product-table').getElementsByTagName('tbody')[0];
+                     let totalRevenue = 0;
+                     data.products.forEach(product => {
+                           let row = productTableBody.insertRow();
+                           row.innerHTML = `
+                              <td>${product.name}</td>
+                              <td>${product.sold}</td>
+                              <td>${product.revenue.toLocaleString()} VND</td>
+                              <td><button class="btn" onclick="viewProductDetails('${product.name}')">Xem</button></td>
+                           `;
+                           totalRevenue += product.revenue;
+                     });
+
+                     document.getElementById('total-revenue-amount').innerText = totalRevenue.toLocaleString() + " VND";
+                  }
+
+                  // Hàm để hiển thị thống kê theo khách hàng
+                  function showCustomerStatistics() {
+                     const customerTableBody = document.getElementById('customer-table').getElementsByTagName('tbody')[0];
+
+                     data.customers.sort((a, b) => b.revenue - a.revenue);
+
+                     data.customers.slice(0, 5).forEach(customer => {
+                           let row = customerTableBody.insertRow();
+                           row.innerHTML = `
+                              <td>${customer.name}</td>
+                              <td>${customer.revenue.toLocaleString()} VND</td>
+                              <td><button class="btn" onclick="viewCustomerDetails('${customer.name}')">Xem</button></td>
+                           `;
+                     });
+                  }
+
+                  function viewProductDetails(productName) {
+                     if (productName === "Nike") {
+                        window.location.href = "khs1.html";
+                     } else if (productName === "Converse") {
+                        window.location.href = "khs2.html";
+                     } else if (productName === "Adidas") {
+                        window.location.href = "khs3.html";
+                     }
+                  }
+
+                  // Hàm để xem chi tiết khách hàng
+                  function viewCustomerDetails(customerName) {
+                     if (customerName === "Nguyễn Văn An") {
+                        window.location.href = "khd1.html";
+                     } else if (customerName === "Trần Thị Ngọc Ánh") {
+                        window.location.href = "khd2.html";
+                     } else if (customerName === "Phạm Quang Vũ") {
+                        window.location.href = "khd3.html";
+                     }else if (customerName === "Lê Thị Hồng") {
+                        window.location.href = "khd4.html";
+                     } else if (customerName === "Hoàng Văn Dũng") {
+                        window.location.href = "khd5.html";
+                  }
+               }
+                  // Hàm lọc dữ liệu theo ngày
+                  function filterData() {
+                     const startDate = document.getElementById('start-date').value;
+                     const endDate = document.getElementById('end-date').value;
+
+                     // Lọc dữ liệu dựa trên khoảng thời gian (ví dụ, có thể so sánh với dữ liệu có sẵn)
+                     alert("Lọc dữ liệu từ " + startDate + " đến " + endDate);
+                     // Sau khi lọc, bạn có thể gọi lại các hàm showProductStatistics và showCustomerStatistics để cập nhật bảng.
+                  }
+
+                  // Hiển thị thống kê ban đầu khi tải trang
+                  showProductStatistics();
+                  showCustomerStatistics();
+            </script>
+         <!-- banner section end -->
+      </div>
+            <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <!-- Nội dung slide -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- jewellery  section end -->
+      <!-- footer section  -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section  -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Chân thành cảm ơn quý khách đã ủng hộ! </span></p>
+         </div>
+      </div>
+      
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         function toggleDropdown(event) {
+    event.preventDefault(); // Ngăn chặn liên kết hoạt động
+    const dropdownMenu = event.target.nextElementSibling;
+    if (dropdownMenu.style.display === "block") {
+        dropdownMenu.style.display = "none";
+    } else {
+        dropdownMenu.style.display = "block";
+    }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+   </body>
+</html>

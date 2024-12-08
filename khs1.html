@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa Đơn Mặt Hàng Converse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .btn {
+            padding: 5px 10px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hóa Đơn Mặt Hàng Nike</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã Hóa Đơn</th>
+                    <th>Khách Hàng</th>
+                    <th>Ngày Mua</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng Tiền</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-table">
+                <!-- Dữ liệu hóa đơn sẽ được thêm qua JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="4">Tổng Cộng</td>
+                    <td id="total-amount">0 VND</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="btn" onclick="goBack()">Quay Lại</button>
+    </div>
+
+    <script>
+        // Dữ liệu mẫu cho hóa đơn của mặt hàng Nike
+        const invoices = [
+            { id: "#001", customer: "Nguyễn Văn An", date: "2024-12-01", quantity: 2, total: 4000000 },
+            { id: "#002", customer: "Trần Thị Ngọc Ánh", date: "2024-12-03", quantity: 1, total: 1500000 },
+            { id: "#003", customer: "Phạm Quang Vũ", date: "2024-12-05", quantity: 3, total: 6500000 },
+            { id: "#004", customer: "Lê Thị Hồng", date: "2024-12-06", quantity: 5, total: 14500000 },
+            { id: "#005", customer: "Hoàng Văn Dũng", date: "2024-12-07", quantity: 4, total: 18000000 }
+        ];
+
+        // Hàm hiển thị danh sách hóa đơn lên bảng
+        function displayInvoices() {
+            const tableBody = document.getElementById("invoice-table");
+            let totalAmount = 0;
+
+            invoices.forEach(invoice => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${invoice.id}</td>
+                    <td>${invoice.customer}</td>
+                    <td>${invoice.date}</td>
+                    <td>${invoice.quantity}</td>
+                    <td>${invoice.total.toLocaleString()} VND</td>
+                `;
+                tableBody.appendChild(row);
+                totalAmount += invoice.total;
+            });
+
+            // Cập nhật tổng số tiền
+            document.getElementById("total-amount").textContent = totalAmount.toLocaleString() + " VND";
+        }
+
+        // Hàm quay lại trang trước
+        function goBack() {
+            window.history.back();
+        }
+
+        // Gọi hàm để hiển thị dữ liệu khi tải trang
+        displayInvoices();
+    </script>
+</body>
+</html>
