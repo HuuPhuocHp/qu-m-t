@@ -253,10 +253,34 @@
                 <strong>Adidas Stan Smith</strong> là dôi giày mang thiết kế cổ điển với mũi giày vỏ sò đặc trưng,
                  thân giày làm từ da tổng hợp cao cấp dễ lau chùi và lót Primegreen thân thiện môi trường, 
                  mang lại sự thoải mái tối đa trong cả ngày dài.
-        </div>
-< </div>
-</div>
-</div>
+                 <p>
+       <!-- Nút Mua ngay và Thêm vào giỏ hàng -->
+       <div class="action-buttons">
+         <a href="thanhtoan.html" class="buy-now">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua ngay
+         </a>
+         <button class="add-to-cart" onclick="addToCart()">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ hàng
+         </button>
+      </div>
+   </div>
+
+   <!-- Thông báo -->
+   <div style="text-align: center; margin-top: 10px;">
+      <p id="cartMessage" class="message"></p>
+   </div>
+
+   <script>
+      function addToCart() {
+         const messageElement = document.getElementById("cartMessage");
+         messageElement.textContent = "Thêm vào giỏ hàng thành công!";
+         messageElement.style.color = "green"; 
+         messageElement.style.display = "block"; 
+      }
+   </script>
+   </div>
+            </div>
+         </div>
 <!-- jewellery  section end -->
 <!-- footer section  -->
 <div class="footer_section layout_padding">
