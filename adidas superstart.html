@@ -207,150 +207,215 @@
          </div>
          <!-- header section end -->
          <!-- biểu ngữ bắt đầu -->
-         
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="my_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                           
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                             
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
+                             
+                           </div>
+                        </div>
+                     </div>
                     
                  
-         <!-- banner section end -->
+      <style>
+         .product-content {
+            display: flex;
+         }
+         .product-content-left {
+            width: 75%;
+         }
+         .product-content-left-big-img img {
+            width: 100%;
+            border-radius: 5px; 
+         }
+         .product-content-right {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+         }
+         .product-content-left-small-img img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+         }
+         .product-content-left-small-img img:hover {
+            transform: scale(1.05);
+         }
+         /* Định dạng size và giá */
+         .size-price-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            gap: 20px;
+         }
+         .size-options {
+            display: flex;
+            gap: 10px;
+         }
+         .size {
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+         }
+         .size:hover {
+            background-color: #f26522;
+            color: #fff;
+            border-color: #f26522;
+         }
+         .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f26522;
+         }
+         /* Nút mua ngay và thêm vào giỏ hàng */
+         .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+         }
+         .buy-now, .add-to-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f26522;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+         }
+         .buy-now:hover, .add-to-cart:hover {
+            background-color: #d35400;
+         }
+         .buy-now i, .add-to-cart i {
+            margin-right: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="page-title">Adidas Superstar</h1>
+         <div class="product-image">
+            <img src="images/jhumka-img.png" alt="Adidas Superstar">
+            <img src="images/adidas-2.png" alt="Adidas Stan Smith">
+            <img src="images/adidas-3.png" alt="Adidas Ultraboost">
+         </div>
+         <div class="size-price-container">
+            <div class="size-options">
+               <div class="size">39</div>
+               <div class="size">40</div>
+               <div class="size">41</div>
+            </div>
+            <div class="price">Giá: 2,000,000 VNĐ</div>
+         </div>
+         <p>
+            <strong>Adidas Superstar</strong> là mẫu giày được yêu thích với thiết kế cổ điển, mũi giày vỏ sò đặc trưng, 
+            phù hợp với mọi phong cách thời trang. Được làm từ chất liệu da cao cấp, bền bỉ và thoáng khí, đôi giày mang 
+            lại sự thoải mái tối đa suốt cả ngày dài. Đế giày sử dụng công nghệ cao su chống trượt, đảm bảo độ bám tốt 
+            trên mọi bề mặt. Người dùng đánh giá cao sự thoải mái, độ bền và tính linh hoạt của sản phẩm này.
+         </p>
+         <!-- Nút Mua ngay và Thêm vào giỏ hàng -->
+         <div class="action-buttons">
+            <a href="thanhtoan.html" class="buy-now">
+               <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua ngay
+            </a>
+            <button class="add-to-cart" onclick="addToCart()">
+               <i class="fa fa-cart-plus" aria-hidden="true"></i> Thêm vào giỏ hàng
+            </button>
+         </div>
       </div>
-         <style>
-            /* Định dạng size và giá */
-           
-        </style>
-    </head>
-    <body>
-        
-</div>
-<section class="product">
-    <div class="container">
-        
-        </div>
-        <div class="product-content row">
-            <!-- Phần bên trái -->
-            <div class="product-content-left">
-                <div class="product-content-left-big-img">
-                    <img src="images/jhumka-img.png" alt="">
-                </div>
-                <div class="product-content-left-small-img">
-                  <img src="images/jhumka-img.png" alt="">
-                    <img src="images/anh19.png" alt="">
-                    <img src="images/anh20.png" alt="">
-                    <img src="images/anh21.png" alt="">
-                    <img src="images/anh22.png" alt="">
-                    <img src="images/anh23.png" alt="">
-                    <img src="images/anh24.png" alt="">
-                </div>
+
+      <!-- Thông báo -->
+      <div style="text-align: center; margin-top: 10px;">
+         <p id="cartMessage" class="message"></p>
+      </div>
+
+      <script>
+         function addToCart() {
+            const messageElement = document.getElementById("cartMessage");
+            messageElement.textContent = "Thêm vào giỏ hàng thành công!";
+            messageElement.style.color = "green"; 
+            messageElement.style.display = "block"; 
+         }
+      </script>
+      </div>
+               </div>
             </div>
-            <!-- Phần bên phải -->
-            <div class="product-content-right">
-                <div class="product-content-right-product-name">
-                    <h1>Adidas SuperStart</h1>
-                 
-                </div>
-                <div class="product-content-right-product-price">
-                    <p>2.000.000<sup>VND</sup></p>
-                </div>
-                <div class="product-content-right-product-size">
-                    <p style="font-weight: bold;">Size:</p>
-                    <div class="size">
-                        <span class="size-option">36</span>
-                        <span class="size-option">37</span>
-                        <span class="size-option">38</span>
-                        <span class="size-option">39</span>
-                        <span class="size-option">40</span>
-                    </div>
-                </div>
-                
-                <div class="quantity">
-                    <p style="font-weight: bold;">Số lượng:</p>
-                    <div class="quantity-wrapper">
-                        <button class="decrease">-</button>
-                        <input type="number" min="1" value="1" readonly>
-                        <button class="increase">+</button>
-                    </div>
-                </div>
-                
-              
-                <div class="product-content-right-product-button">
-                    <button onclick="redirectToCheckout()"><i class=" "></i> <p>MUA NGAY</p></button>
-                    <button onclick="addToCart()"><p>THÊM VÀO GIỎ HÀNG</p></button>
-                </div>
-                <script>
-                    // Chuyển hướng đến trang thanh toán khi nhấn "Mua ngay"
-                    function redirectToCheckout() {
-                        window.location.href = "thanhtoan.html"; // Thay "thanhtoan.html" bằng đường dẫn trang thanh toán của bạn
-                    }
-                
-                    // Hiển thị thông báo "Đã thêm vào giỏ hàng" khi nhấn "Thêm vào giỏ hàng"
-                    function addToCart() {
-                        const messageElement = document.getElementById("cartMessage");
-                        messageElement.textContent = "Đã thêm vào giỏ hàng!";
-                        messageElement.style.color = "green";  // Màu thông báo thành công
-                        messageElement.style.display = "block";  // Hiển thị thông báo
-                    }
-                </script>
-               <div style="text-align: center; margin-top: 10px;">
-                <p id="cartMessage" class="message" style="display: none;"></p>
-            </div>
-                <div class="product-content-right-details">
-                    <h3>Thông tin sản phẩm</h3>
-                    <p>Giới tính: Unisex</p>
-                    <p>Màu sắc: Trắng</p>
-                    <p>Kiểu dáng: Giày thể thao</p>
-                    <p>Chất liệu: Da cao cấp</p>
-                </div>
-            </div>
-        </div>
-<!-- jewellery  section end -->
-      <!-- footer section start -->
+ <!-- jewellery  section end -->
+      <!-- footer section  -->
       <div class="footer_section layout_padding">
-        <div class="container">
-           <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
-           
+         <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+      
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="https://www.facebook.com/tamnhu.trinh.587?mibextid=ZbWKwL" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/fromyourearth?igsh=MXRuNWw0Ynp4Yjhhaw%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+                <li><a href="https://www.tiktok.com/@nhuu154?_t=8qX1tMNKtOM&_r=1" target="_blank"><img src="images/tiktok-icon.png" alt="TikTok"></a></li>
+               </ul>
+            </div>
+            <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section  -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Chân thành cảm ơn quý khách đã ủng hộ! </span></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/carousel.js"></script>
+      <script src="js/scripts.js"></script>
+
+
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
          
-           <div class="product-content-right-product-icon">
-            <div class="product-content-right-product-icon-item">
-                <i class="fas fa-phone-alt"></i>
-                <p>Hotline</p>
-            </div>
-            <div class="product-content-right-product-icon-item">
-                <i class="far fa-comments"></i>
-                <p>Chat</p>
-            </div>
-            <div class="product-content-right-product-icon-item">
-                <i class="far fa-envelope"></i>
-                <p>Mail</p>
-            </div>
-        </div>
-     <!-- footer section end -->
-     <!-- copyright section start -->
-     <div class="copyright_section">
-        <div class="container">
-           <p class="copyright_text">Chân thành cảm ơn quý khách đã ủng hộ! </span></p>
-        </div>
-     </div>
-     <!-- copyright section end -->
-     <!-- Javascript files-->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/popper.min.js"></script>
-     <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="js/jquery-3.0.0.min.js"></script>
-     <script src="js/plugin.js"></script>
-     <script src="carousel.js"></script>
-     <script src="js/slider.js"></script>
-     <script src="js/scrip.js"></script>
-     <!-- sidebar -->
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
     
-     
-     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-     </script>
-  </body>
+   </body>
 </html>
-     

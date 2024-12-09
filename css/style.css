@@ -26,10 +26,10 @@ html {
 }
 
 body {
-    color: #060000;
-    font-size: 15px;
+    color: #666666;
+    font-size: 14px;
     line-height: 1.80857;
-    font-weight: 900;
+    font-weight: normal;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
 }
@@ -238,7 +238,11 @@ button {
 .custom_menu {
     width: 100%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .custom_menu ul {
@@ -249,9 +253,15 @@ button {
 
 .custom_menu li {
     float: left;
+<<<<<<< HEAD
+    font-size: 20px;
+    color: #f1f1f1;
+    padding: 6px 35px 0px 35px;
+=======
     font-size: 16px;
     color: #f1f1f1;
     padding: 6px 10px 0px 10px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .custom_menu li a {
@@ -270,12 +280,20 @@ button {
 
 .logo_section {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .logo {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     text-align: center;
     padding: 30px 0px;
 }
@@ -347,10 +365,14 @@ button {
     order: 2;
 }
 
+<<<<<<< HEAD
+
+=======
 .header_box {
     order: 2;
     display: flex;
 }
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 
 .dropdown,
 .dropleft,
@@ -358,7 +380,11 @@ button {
 .dropup {
     position: relative;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     display: inline-block;
     margin-left: 30px;
     order: 2;
@@ -407,7 +433,11 @@ button {
     width: 2.375rem;
     height: 2.375rem;
     line-height: 2.375rem;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     pointer-events: none;
     color: #aaa;
 }
@@ -479,19 +509,29 @@ a:hover {
 
 .banner_section {
     width: 100%;
+<<<<<<< HEAD
+    float: center;
+=======
     float: left;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     padding-bottom: 60px;
 }
 
 .banner_taital {
     width: 100%;
     font-size: 60px;
+<<<<<<< HEAD
+    color: #0d0c0c;
+=======
     color: #ffffff;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
 .buynow_bt {
     width: 170px;
     margin: 0 auto;
@@ -515,6 +555,7 @@ a:hover {
     background-color: #f26522;
     color: #ffffff;
 }
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 
 #my_slider a.carousel-control-next {
     right: 0px;
@@ -560,7 +601,11 @@ a:hover {
     width: 100%;
     font-size: 40px;
     color: #30302e;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     font-weight: bold;
 }
 
@@ -582,7 +627,11 @@ a:hover {
     width: 100%;
     font-size: 20px;
     color: #30302e;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     font-weight: bold;
     padding-bottom: 5px;
 }
@@ -591,13 +640,21 @@ a:hover {
     width: 100%;
     font-size: 16px;
     color: #f26522;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 0px;
 }
 
 .tshirt_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 370px;
 }
@@ -681,7 +738,11 @@ a:hover {
 
 .electronic_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 293px;
 }
@@ -728,7 +789,11 @@ a:hover {
 
 .jewellery_img {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 50px 0px;
     min-height: 293px;
 }
@@ -766,7 +831,11 @@ a:hover {
 
 .loader_main {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin-top: 140px;
 }
 
@@ -817,19 +886,27 @@ a:hover {
 .footer_section {
     width: 100%;
     float: left;
-    background-color: #f8f6f6;
+    background-color: #252525;
     height: auto;
 }
 
 .footer_logo {
     width: 100%;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .input_bt {
     width: 60%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     display: flex;
     border-bottom: 1px solid #ffffff !important;
 }
@@ -873,7 +950,11 @@ input.mail_bt::placeholder {
 .footer_menu {
     width: 100%;
     margin: 0 auto;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .footer_menu ul {
@@ -901,18 +982,22 @@ input.mail_bt::placeholder {
     width: 100%;
     margin: 0 auto;
     padding-top: 30px;
+<<<<<<< HEAD
+    text-align: left;
+=======
     text-align: center;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 .location_main {
     float: left;
     font-size: 16px;
-    color: #0b0000;
+    color: #ffffff;
     padding: 30px 30px 30px 30px;
 }
 
 .location_main a {
-    color: #000000;
+    color: #ffffff;
 }
 
 .location_main a:hover {
@@ -937,7 +1022,11 @@ input.mail_bt::placeholder {
     float: left;
     color: #ffffff;
     text-align: center;
+<<<<<<< HEAD
+    font-size: 30px;
+=======
     font-size: 16px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
     margin: 20px 0px;
 }
 
@@ -954,6 +1043,8 @@ input.mail_bt::placeholder {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -963,6 +1054,7 @@ input.mail_bt::placeholder {
 
 
 
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 /* copyright section end */
 /* CSS cho Giỏ hàng */
 .login_menu .cart a {
@@ -981,6 +1073,37 @@ input.mail_bt::placeholder {
 .login_menu .login a:hover {
     color: #f26522; /* Màu cam khi di chuột qua Đăng nhập */
 }
+<<<<<<< HEAD
+/*hiển thị số */
+.carousel-controls {
+    display: flex; /* Sử dụng flexbox để căn chỉnh hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    position: relative; /* Để sử dụng cho vị trí tuyệt đối của số */
+    margin-top: -30px; /* Điều chỉnh để số nằm ở giữa mũi tên */
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px; /* Kích thước chữ cho số thứ tự */
+    z-index: 10; /* Đảm bảo số thứ tự không bị che khuất */
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 3000%; /* Điều chỉnh theo nhu cầu */
+    transform: translateY(-50%); /* Giúp mũi tên canh giữa theo chiều dọc */
+}
+.banner_taital {
+    font-family: 'Roboto', cursive; /* Chọn phông chữ theo ý muốn, ví dụ Roboto */
+    font-size: 36px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+    color: #000; /* Màu chữ */
+    text-align: center; /* Canh giữa chữ */
+=======
 
 .font-weight-bold {
     font-weight: bold; /* Đảm bảo rằng lớp này định nghĩa độ đậm */
@@ -1008,7 +1131,7 @@ input.mail_bt::placeholder {
     margin: 20px auto;
     background: transparent;
     border-radius: 10px;
-    box-shadow: 1 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     overflow: hidden;
@@ -1152,19 +1275,13 @@ input.mail_bt::placeholder {
 /* Tìm kiếm nâng cao */
 .advanced-search {
     margin: 0 auto; /* Căn giữa toàn bộ theo chiều ngang */
-    padding: 29px;
+    padding: 20px;
     max-width: 600px; /* Đảm bảo nó không vượt quá kích thước chuẩn */
-    border: 1px solid transparent;
+    border: 1px solid #ddd;
     border-radius: 5px;
     background-color: transparent;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Thêm hiệu ứng */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng */
 }
-.label {
-    font-weight: 900 !important; 
-    font-size: 200px; 
-    color: #000000; 
-}
-
 
 /* Tìm kiếm đơn giản */
 .input-group {
@@ -1230,159 +1347,7 @@ input.mail_bt::placeholder {
 
 
 
-.product {
-    padding: 100px 0;
-}
-
-.product-top {
-    margin-bottom: 30px;
-}
-
-.product-top p {
-    font-family: var(--main-text-font);
-    margin: 0 12px;
-    font-size: 12px;
-}
-.product-content{
-   display: flex;
-   flex-wrap: nowrap;
-   justify-content: space-between;
-   align-items: flex-start;
-   gap: 20px;
-   
-
-}
-
-.product-content-left {
-    flex: 1;
-    max-width: 50%;
-    box-sizing: border-box;
-    width: 100px;
-    height: auto;
-}
-.product-content-right{
-    flex: 1;
-    max-width: 50%;
-    box-sizing: border-box;
-    padding-left: 20px;
-}
-.product-content-left-big-img {
-    width: 80%;
-    padding-right: 20px;
-}
-
-.product-content-left-big-img img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-.product-content-left-small-img {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.product-content-left-small-img img {
-    width: 70px;
-    height: auto;
-    cursor: pointer;
-}
-@media (max-width: 768px) {
-    .product-content {
-        flex-direction: column; /* Chuyển sang bố cục dọc */
-        align-items: center;
-    }
-
-    .product-content-left,
-    .product-content-right {
-        max-width: 100%; /* Chiếm toàn bộ chiều rộng */
-        margin-bottom: 20px; /* Thêm khoảng cách giữa hai phần */
-    }
-
-    .product-content-right {
-        padding-left: 0; /* Loại bỏ khoảng cách bên trái */
-    }
-}
-
-.product-content-right {
-    width: 50%;
-    padding-left: 20px;
-}
-.product-content-right-product-name h1 {
-    font-family: var(--main-text-font);
-    font-size: 35px;
-    font-weight: bold;
-}
-.product-content-right-product-name p{
-    color: gray;
-    font-size: 16px;
-}
-.product-content-right-product-price {
-    margin: 12px 0;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: var(--main-text-font);
-}
-.product-content-right-product-price p {
-    font-size: 25px;
-    font-weight: bold;
-}
-.size-option {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border 0.3s ease, background-color 0.3s ease;
-}
-
-.size-option:hover {
-    border-color: #000; /* Viền đậm khi hover */
-}
-
-.size-option.selected {
-    border: 2px solid #000; /* Viền đậm khi được chọn */
-    background-color: #f0f0f0; /* Nền nhạt để nhấn mạnh */
-}
-
-
-.quantity-wrapper {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 120px;
-    height: 40px;
-}
-
-.quantity-wrapper button {
-    width: 40px;
-    height: 100%;
-    background-color: #f9f9f9;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.quantity-wrapper button:hover {
-    background-color: #e0e0e0;
-}
-
-.quantity-wrapper input {
-    width: 40px;
-    height: 100%;
-    border: none;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #fff;
-    pointer-events: none; /* Không cho người dùng nhập trực tiếp */
+.pointer-events: none; /* Không cho người dùng nhập trực tiếp */
 }
 
 .quantity-wrapper button:focus {
@@ -1494,11 +1459,14 @@ input.mail_bt::placeholder {
      flex-direction: column;
      text-align: center;
      min-height: 150px;
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
 }
 
 
 
 
+<<<<<<< HEAD
+=======
 .activeB
 {
      display: none;
@@ -1516,44 +1484,4 @@ input.mail_bt::placeholder {
     font-size: 16px;
     font-weight: bold;
 }
-.message {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e0f7e0;  /* Màu nền nhẹ cho thông báo thành công */
-    color: green;
-}
-/* Căn giữa phần số lượng */
-.quantity {
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    margin-top: 20px; /* Khoảng cách từ phần trên */
-}
-
-.quantity-wrapper {
-    display: flex;
-    align-items: center; /* Căn giữa các phần tử trong .quantity-wrapper */
-    justify-content: center; /* Căn giữa các phần tử trong .quantity-wrapper */
-    border: 1px solid #ddd; /* Đặt viền cho phần số lượng */
-    border-radius: 5px; /* Bo góc */
-    overflow: hidden; /* Ẩn phần thừa */
-}
-
-.quantity-wrapper button {
-    width: 40px;
-    height: 40px;
-    background-color: #f9f9f9;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.quantity-wrapper input {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    border: none;
-    background-color: #f9f9f9;
-}
+>>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d

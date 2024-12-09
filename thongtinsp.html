@@ -35,6 +35,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://kit.fontawesome.com/b7b41b7cf6.js" crossorigin="anonymous"></script>
    </head>
    <body>
       <!-- trang chủ -->
@@ -63,7 +64,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-sm-12">
-                     <div class="logo"><a href="Home1.html"><img src="images/logo.png"></a></div>
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                   </div>
                </div>
             </div> 
@@ -92,7 +93,8 @@
             <div class="container"></div>
             <title>Tìm kiếm nâng cao</title>
             
-          
+            //////////
+
         
         
         <h1>Lọc sản phẩm</h1>
@@ -169,9 +171,6 @@
                 messageElement.style.display = "block"; // Hiển thị thông báo
             }
         </script>
-        </div>
-        </div>
-        </div>
         
                   <div class="header_box">
                      <div class="lang_box ">
@@ -205,13 +204,6 @@
                </div>
             </div>
          </div>
-         <!-- header section end -->
-         <!-- biểu ngữ bắt đầu -->
-         
-                    
-                 
-         <!-- banner section end -->
-      </div>
          <style>
             /* Định dạng size và giá */
            
@@ -222,14 +214,14 @@
 </div>
 <section class="product">
     <div class="container">
-        
+        <div class="product-top row">
+            <p>Trang chủ</p> <span>&#10230;</span> <p>Nike</p> <span>&#10230;</span> <p>Nike air force</p>
         </div>
         <div class="product-content row">
             <!-- Phần bên trái -->
             <div class="product-content-left">
                 <div class="product-content-left-big-img">
-                   <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9986c8b1-1032-493e-a595-28c0b1f7ad95/NIKE+AIR+FORCE+1+GS.png" alt="" >
-
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9986c8b1-1032-493e-a595-28c0b1f7ad95/NIKE+AIR+FORCE+1+GS.png" alt="">
                 </div>
                 <div class="product-content-left-small-img">
                     <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/c8fab54a-62c2-4dd8-8357-1f5761549833/NIKE+AIR+FORCE+1+GS.png" alt="">
@@ -238,20 +230,16 @@
                     <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/225f2024-2139-4c20-bf99-d3e18f9cd460/NIKE+AIR+FORCE+1+GS.png" alt="">
                     <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/db97bea6-bb73-4341-8f22-2f182101b6cc/NIKE+AIR+FORCE+1+GS.png" alt="">
                     <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5480e42b-efb4-43ba-81bd-9cd968f02ede/NIKE+AIR+FORCE+1+GS.png" alt="">
-
-
                 </div>
             </div>
             <!-- Phần bên phải -->
             <div class="product-content-right">
                 <div class="product-content-right-product-name">
-                    <h1>Nike Air Force 1 Low</h1>
-                    
-
-
+                    <h1>Nike Air Force 1</h1>
+                    <p>Older Kids' Shoes</p>
                 </div>
                 <div class="product-content-right-product-price">
-                    <p>2.500.000<sup>VND</sup></p>
+                    <p>2,039,199<sup>đ</sup></p>
                 </div>
                 <div class="product-content-right-product-size">
                     <p style="font-weight: bold;">Size:</p>
@@ -273,28 +261,25 @@
                     </div>
                 </div>
                 
-              
+                <p style="color: red;">Vui lòng chọn size</p>
                 <div class="product-content-right-product-button">
-                    <button onclick="redirectToCheckout()"><i class=" "></i> <p>MUA NGAY</p></button>
-                    <button onclick="addToCart()"><p>THÊM VÀO GIỎ HÀNG</p></button>
+                    <button><i class="fas fa-shopping-cart"></i> <p>MUA NGAY</p></button>
+                    <button><p>THÊM VÀO GIỎ HÀNG</p></button>
                 </div>
-                <script>
-                    // Chuyển hướng đến trang thanh toán khi nhấn "Mua ngay"
-                    function redirectToCheckout() {
-                        window.location.href = "thanhtoan.html"; // Thay "thanhtoan.html" bằng đường dẫn trang thanh toán của bạn
-                    }
-                
-                    // Hiển thị thông báo "Đã thêm vào giỏ hàng" khi nhấn "Thêm vào giỏ hàng"
-                    function addToCart() {
-                        const messageElement = document.getElementById("cartMessage");
-                        messageElement.textContent = "Đã thêm vào giỏ hàng!";
-                        messageElement.style.color = "green";  // Màu thông báo thành công
-                        messageElement.style.display = "block";  // Hiển thị thông báo
-                    }
-                </script>
-               <div style="text-align: center; margin-top: 10px;">
-                <p id="cartMessage" class="message" style="display: none;"></p>
-            </div>
+                <div class="product-content-right-product-icon">
+                    <div class="product-content-right-product-icon-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Hotline</p>
+                    </div>
+                    <div class="product-content-right-product-icon-item">
+                        <i class="far fa-comments"></i>
+                        <p>Chat</p>
+                    </div>
+                    <div class="product-content-right-product-icon-item">
+                        <i class="far fa-envelope"></i>
+                        <p>Mail</p>
+                    </div>
+                </div>
                 <div class="product-content-right-details">
                     <h3>Thông tin sản phẩm</h3>
                     <p>Giới tính: Unisex</p>
@@ -310,21 +295,16 @@
         <div class="container">
            <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
            
-           
-           <div class="product-content-right-product-icon">
-            <div class="product-content-right-product-icon-item">
-                <i class="fas fa-phone-alt"></i>
-                <p>Hotline</p>
-            </div>
-            <div class="product-content-right-product-icon-item">
-                <i class="far fa-comments"></i>
-                <p>Chat</p>
-            </div>
-            <div class="product-content-right-product-icon-item">
-                <i class="far fa-envelope"></i>
-                <p>Mail</p>
-            </div>
+           <div class="footer_menu">
+              <ul>
+                 <li><a href="https://www.facebook.com/tamnhu.trinh.587?mibextid=ZbWKwL" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+               <li><a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+               <li><a href="https://tiktok.com" target="_blank"><img src="images/tiktok-icon.png" alt="TikTok"></a></li>
+              </ul>
+           </div>
+           <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
         </div>
+     </div>
      <!-- footer section end -->
      <!-- copyright section start -->
      <div class="copyright_section">
