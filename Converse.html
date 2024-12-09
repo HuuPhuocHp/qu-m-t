@@ -41,33 +41,13 @@
       <div class="banner_bg_main">
          <!-- header top section  -->
          <div class="container">
-            <div class="header_section_top">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="custom_menu">
-                        <ul>
-                           <li><a href="#">       </a></li>
-                           <li><a href="#">Bán chạy </a></li>
-                           <li><a href="#">Mẫu mới </a></li>
-                           <li><a href="#">Chương trình khuyến mãi </a></li>
-                           <li><a href="#">Dịch vụ khách hàng </a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+          
+             
          <!-- phần trên tiêu đề -->
          <!-- logo tiêu đề -->
          <div class="logo_section">
             <div class="container">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-                  </div>
-               </div>
-            </div> 
-         </div>
+               
          <!-- logo cuối-->
          <!-- phần chú ý  -->
          <div class="header_section">
@@ -89,157 +69,91 @@
                      </div>
                   </div>
          <div class="main">
-                      <title>Tìm kiếm nâng cao</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .search-section {
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .search-section label {
-            display: block;
-            font-weight: bold;
-            margin: 10px 0 5px;
-        }
-        .search-section select, 
-        .search-section input, 
-        .search-section button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .search-section button {
-            background-color: #007bff;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .search-section button:hover {
-            background-color: #0056b3;
-        }
-        .message {
-            margin-top: 20px;
-            font-size: 18px;
-            color: green;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <h1>Lọc sản phẩm </h1>
-
-    <!-- Tìm kiếm nâng cao -->
-   
-      <div class="container advanced-search" id="advancedSearch">
-        <label for="keyword">Từ khóa:</label>
-        <input type="text" id="keyword" placeholder="Nhập mục đích sử dụng">
-
-        <label for="brand">Thương hiệu:</label>
-        <select id="brand">
-            <option value="">Tất cả</option>
-            <option value="Nike">Nike</option>
-            <option value="Adidas">Adidas</option>
-            <option value="Converse">Converse</option>
-        </select>
-
-        <label for="price-range">Khoảng giá:</label>
-        <select id="price-range">
-            <option value="">Tất cả</option>
-            <option value="1000000-3000000">1 - 3 triệu</option>
-            <option value="3000000-5000000">3 - 5 triệu</option>
-            <option value="5000000-9000000">trên 5 triệu</option>
-        </select>
-
-        <label for="type">Kiểu dáng:</label>
-        <select id="type">
-            <option value="">Tất cả</option>
-            <option value="high">Cổ cao</option>
-            <option value="low">Cổ ngắn</option>
-        </select>
-
-        <button onclick="searchProducts()">Tìm kiếm</button>
-    </div>
-
-    <!-- Hiển thị thông báo -->
-    <p id="message" class="message"></p>
-
-    <script>
-       
-  
-        function searchProducts() {
-            const keyword = document.getElementById('keyword').value.toLowerCase();
-            const brand = document.getElementById('brand').value;
-            const priceRange = document.getElementById('price-range').value;
-            const type = document.getElementById('type').value;
-
-            let minPrice = 0, maxPrice = Infinity;
-            if (priceRange) {
-                [minPrice, maxPrice] = priceRange.split('-').map(Number);
-            }
-
-            const products = document.querySelectorAll('.product-card');
-            products.forEach(product => {
-                const productBrand = product.getAttribute('data-brand').toLowerCase();
-                const productPrice = parseInt(product.getAttribute('data-price'));
-                const productType = product.getAttribute('data-type').toLowerCase();
-                const productName = product.querySelector('h4').textContent.toLowerCase();
-
-                const matchKeyword = !keyword || productName.includes(keyword);
-                const matchBrand = !brand || productBrand === brand.toLowerCase();
-                const matchPrice = productPrice >= minPrice && productPrice <= maxPrice;
-                const matchType = !type || productType === type.toLowerCase();
-
-                if (matchKeyword && matchBrand && matchPrice && matchType) {
-                    product.style.display = 'block';
+            <div class="container"></div>
+            <title>Tìm kiếm nâng cao</title>
+            
+          
+        
+        
+        <h1>Lọc sản phẩm</h1>
+        
+        
+        <!-- Tìm kiếm nâng cao -->
+        <div class=" advanced-search" >
+            <label for="keyword">Từ khóa:</label>
+            <input type="text" id="keyword" placeholder="Nhập mục đích sử dụng">
+        
+            <label for="brand">Thương hiệu:</label>
+            <select id="brand">
+                <option value="">Tất cả</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Converse">Converse</option>
+            </select>
+        
+            <label for="price-range">Khoảng giá:</label>
+            <select id="price-range">
+                <option value="">Tất cả</option>
+                <option value="1000000-3000000">1 - 3 triệu</option>
+                <option value="3000000-5000000">3 - 5 triệu</option>
+                <option value="5000000-9000000">trên 5 triệu</option>
+            </select>
+        
+            <label for="type">Kiểu dáng:</label>
+            <select id="type">
+                <option value="">Tất cả</option>
+                <option value="high">Cổ cao</option>
+                <option value="low">Cổ ngắn</option>
+            </select>
+        
+            <button onclick="searchFunction()">Tìm kiếm</button>
+        </div>
+        
+        <!-- Tìm kiếm đơn giản -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm" id="searchInput">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" onclick="searchFunction()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hiển thị thông báo -->
+        <div style="text-align: center; margin-top: 10px;">
+            <p id="searchMessage" class="message"></p>
+        </div>
+        
+        <script>
+            function searchFunction() {
+                // Lấy giá trị từ các trường tìm kiếm nâng cao
+                const keyword = document.getElementById('keyword').value.trim();
+                const brand = document.getElementById('brand').value;
+                const priceRange = document.getElementById('price-range').value;
+                const type = document.getElementById('type').value;
+        
+                // Lấy giá trị từ trường tìm kiếm đơn giản
+                const searchInput = document.getElementById("searchInput").value.trim();
+        
+                // Lấy phần tử hiển thị thông báo
+                const messageElement = document.getElementById("searchMessage");
+        
+                // Kiểm tra nếu có từ khóa tìm kiếm hoặc tiêu chí lọc
+                if (searchInput || keyword || brand !== "" || priceRange !== "" || type !== "") {
+                    messageElement.textContent = "Tìm kiếm thành công!";
+                    messageElement.style.color = "green";  // Màu thông báo thành công
                 } else {
-                    product.style.display = 'none';
+                    messageElement.textContent = "Vui lòng nhập từ khóa ";
+                    messageElement.style.color = "red";  // Màu thông báo lỗi
                 }
-            });
-        }
-    </script>
-    </script>
-                    <div class="input-group">
-                  <div class="input-group" style="max-width: 600px; margin: 0 auto;">
-                     <input type="text" class="form-control" placeholder="Tìm kiếm" id="searchInput">
-                     <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522" onclick="searchFunction()">
-                           <i class="fa fa-search"></i>
-                        </button>
-                     </div>
-                  </div>
-                  <!-- Chèn thông báo -->
-                  <div style="text-align: center; margin-top: 10px;">
-                     <p id="searchMessage" style="color: green; font-weight: bold; margin: 0;"></p>
-                  </div>
-                  
-                  <script>
-                     function searchFunction() {
-                        const searchInput = document.getElementById("searchInput").value;
-                        const messageElement = document.getElementById("searchMessage");
-                  
-                        if (searchInput.trim() !== "") {
-                           messageElement.textContent = "Tìm kiếm thành công!";
-                        } else {
-                           messageElement.textContent = "Vui lòng nhập từ khóa trước khi tìm kiếm!";
-                           messageElement.style.color = "red";
-                        }
-                     }
-                  </script>
-                  
-
+        
+                messageElement.style.display = "block"; // Hiển thị thông báo
+            }
+        </script>
+        </div>
+        </div>
+        </div>
+        
                   <div class="header_box">
                      <div class="lang_box ">
                         
@@ -305,8 +219,7 @@
                     
                  
          <!-- banner section end -->
-      </div>
-      <!-- banner bg main end -->
+      </div>r bg main end -->
       <!-- electronic section start -->
       <div class="fashion_section">
          <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
