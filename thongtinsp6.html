@@ -263,23 +263,26 @@
                 
                 <p style="color: red;">Vui lòng chọn size</p>
                 <div class="product-content-right-product-button">
-                    <button><i class="fas fa-shopping-cart"></i> <p>MUA NGAY</p></button>
-                    <button><p>THÊM VÀO GIỎ HÀNG</p></button>
+                    <button onclick="redirectToCheckout()"><i class=" "></i> <p>MUA NGAY</p></button>
+                    <button onclick="addToCart()"><p>THÊM VÀO GIỎ HÀNG</p></button>
                 </div>
-                <div class="product-content-right-product-icon">
-                    <div class="product-content-right-product-icon-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <p>Hotline</p>
-                    </div>
-                    <div class="product-content-right-product-icon-item">
-                        <i class="far fa-comments"></i>
-                        <p>Chat</p>
-                    </div>
-                    <div class="product-content-right-product-icon-item">
-                        <i class="far fa-envelope"></i>
-                        <p>Mail</p>
-                    </div>
-                </div>
+                <script>
+                    // Chuyển hướng đến trang thanh toán khi nhấn "Mua ngay"
+                    function redirectToCheckout() {
+                        window.location.href = "thanhtoan2.html"; // Thay "thanhtoan.html" bằng đường dẫn trang thanh toán của bạn
+                    }
+                
+                    // Hiển thị thông báo "Đã thêm vào giỏ hàng" khi nhấn "Thêm vào giỏ hàng"
+                    function addToCart() {
+                        const messageElement = document.getElementById("cartMessage");
+                        messageElement.textContent = "Đã thêm vào giỏ hàng!";
+                        messageElement.style.color = "green";  // Màu thông báo thành công
+                        messageElement.style.display = "block";  // Hiển thị thông báo
+                    }
+                </script>
+               <div style="text-align: center; margin-top: 10px;">
+                <p id="cartMessage" class="message" style="display: none;"></p>
+            </div>
                 <div class="product-content-right-details">
                     <h3>Thông tin sản phẩm</h3>
                     <p>Giới tính: Unisex</p>

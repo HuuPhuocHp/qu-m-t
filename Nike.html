@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <!-- basic -->
+      <!-- thông tin cơ bản -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Fashion</title>
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <!-- meta di động -->
+      <meta name="viewport" content="width=device-width - initial-scale=1">
+      <meta name="viewport" content="initial-scale=1 - maximum-scale=1">
+      <!-- meta web -->
+      <title>Eflyer</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -37,15 +37,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body>
-      <!-- banner bg main start -->
+      <!-- trang chủ -->
       <div class="banner_bg_main">
-         <!-- header top section start -->
+         <!-- header top section  -->
          <div class="container">
             <div class="header_section_top">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
+                           <li><a href="#">       </a></li>
                            <li><a href="#">Bán chạy </a></li>
                            <li><a href="#">Mẫu mới </a></li>
                            <li><a href="#">Chương trình khuyến mãi </a></li>
@@ -56,8 +57,8 @@
                </div>
             </div>
          </div>
-         <!-- header top section start -->
-         <!-- logo section start -->
+         <!-- phần trên tiêu đề -->
+         <!-- logo tiêu đề -->
          <div class="logo_section">
             <div class="container">
                <div class="row">
@@ -65,10 +66,10 @@
                      <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                   </div>
                </div>
-            </div>
+            </div> 
          </div>
-         <!-- logo section end -->
-         <!-- header section start -->
+         <!-- logo cuối-->
+         <!-- phần chú ý  -->
          <div class="header_section">
             <div class="container">
                <div class="containt_main">
@@ -81,43 +82,120 @@
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                   <div class="dropdown">
-
+                      
                      </button>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    
+               
                      </div>
                   </div>
-                  <div class="main">
-                     <!-- Another variation with a button -->
-                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm ">
-                        <div class="input-group-append">
-                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
-                           <i class="fa fa-search"></i>
-                           </button>
-                        </div>
-                     </div>
-                  </div>
+         <div class="main">
+            <div class="container"></div>
+            <title>Tìm kiếm nâng cao</title>
+            
+        
+        
+        <h1>Lọc sản phẩm</h1>
+        
+        <!-- Tìm kiếm nâng cao -->
+        <div class=" advanced-search" >
+            <label for="keyword">Từ khóa:</label>
+            <input type="text" id="keyword" placeholder="Nhập mục đích sử dụng">
+        
+            <label for="brand">Thương hiệu:</label>
+            <select id="brand">
+                <option value="">Tất cả</option>
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Converse">Converse</option>
+            </select>
+        
+            <label for="price-range">Khoảng giá:</label>
+            <select id="price-range">
+                <option value="">Tất cả</option>
+                <option value="1000000-3000000">1 - 3 triệu</option>
+                <option value="3000000-5000000">3 - 5 triệu</option>
+                <option value="5000000-9000000">trên 5 triệu</option>
+            </select>
+        
+            <label for="type">Kiểu dáng:</label>
+            <select id="type">
+                <option value="">Tất cả</option>
+                <option value="high">Cổ cao</option>
+                <option value="low">Cổ ngắn</option>
+            </select>
+        
+            <button onclick="searchFunction()">Tìm kiếm</button>
+        </div>
+        
+        <!-- Tìm kiếm đơn giản -->
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm" id="searchInput">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" onclick="searchFunction()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hiển thị thông báo -->
+        <div style="text-align: center; margin-top: 10px;">
+            <p id="searchMessage" class="message"></p>
+        </div>
+        
+        <script>
+            function searchFunction() {
+                // Lấy giá trị từ các trường tìm kiếm nâng cao
+                const keyword = document.getElementById('keyword').value.trim();
+                const brand = document.getElementById('brand').value;
+                const priceRange = document.getElementById('price-range').value;
+                const type = document.getElementById('type').value;
+        
+                // Lấy giá trị từ trường tìm kiếm đơn giản
+                const searchInput = document.getElementById("searchInput").value.trim();
+        
+                // Lấy phần tử hiển thị thông báo
+                const messageElement = document.getElementById("searchMessage");
+        
+                // Kiểm tra nếu có từ khóa tìm kiếm hoặc tiêu chí lọc
+                if (searchInput || keyword || brand !== "" || priceRange !== "" || type !== "") {
+                    messageElement.textContent = "Tìm kiếm thành công!";
+                    messageElement.style.color = "green";  // Màu thông báo thành công
+                } else {
+                    messageElement.textContent = "Vui lòng nhập từ khóa ";
+                    messageElement.style.color = "red";  // Màu thông báo lỗi
+                }
+        
+                messageElement.style.display = "block"; // Hiển thị thông báo
+            }
+        </script>
+        </div>
+        </div>
+        </div>
                   <div class="header_box">
                      <div class="lang_box ">
-                  
-                       
+                        
+                        
                         <div class="dropdown-menu ">
                            <a href="#" class="dropdown-item">
-                          
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
                            </a>
                         </div>
                      </div>
                      <div class="login_menu">
                         <ul>
-                           <li class="cart"> 
+                           <li class="cart">
                            <a href="#">
+                              <a href = "giohang.html">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Giỏ hàng </span></a>
+                           </li>
+                           
                            <li class="login">
                            <a href="#">
+                              <a href ="ls.html" >
                               <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10">Đăng nhập </span></a>
+                              <span class="padding_10"> Hp </span></a>
                            </li>
                         </ul>
                      </div>
@@ -126,39 +204,12 @@
             </div>
          </div>
          <!-- header section end -->
-         <!-- banner section start -->
-         <div class="banner_section layout_padding">
-            <div class="container">
-               <div id="my_slider" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                     <div class="carousel-item active">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
-                             
-                           </div>
-                        </div>
-                     </div>
-                     <div class="carousel-item">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
-                             
-                           </div>
-                        </div>
-                     </div>
-                     <div class="carousel-item">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <h1 class="banner_taital">Mỗi bước đi - một dấu ấn</h1>
-                             
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  
+         
+                    
+                 
          <!-- banner section end -->
-      </div>
+      <
+         
       <!-- banner bg main end -->
       <!-- fashion section start -->
       <div class="fashion_section">
@@ -175,8 +226,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">2.500.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="thongtinsp.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -184,10 +235,10 @@
                               <div class="box_main">
                                  <h4 class="shirt_text">Nike Dunk Low Retro</h4>
                                  <p class="price_text">Giá bán <span style="color: #262626;">$2.700.000 VND</span></p>
-                                 <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <div class="tshirt_img"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a447e0eb-b47c-464b-91df-5387f958582d/W+NIKE+DUNK+LOW.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="nikedunklow.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -195,10 +246,10 @@
                               <div class="box_main">
                                  <h4 class="shirt_text">Nike Air Max 90</h4>
                                  <p class="price_text">Giá bán <span style="color: #262626;">$3.000.000 VND</span></p>
-                                 <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                 <div class="tshirt_img"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d0370114-298a-474f-b4e3-4126943e1d30/AIR+MAX+90.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="nikeairmax90.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -217,8 +268,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">4.500.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh1.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay </a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm </a></div>
+                                    <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                    <div class="seemore_bt"><a href="thongtinsp4.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -228,8 +279,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">2.200.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh2.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay </a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm </a></div>
+                                    <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                    <div class="seemore_bt"><a href="thongtinsp6.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -239,8 +290,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">2.400.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh3.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="nikeblazermid.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -259,8 +310,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">3.200.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh4.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="thongtinsp5.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -270,8 +321,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">3.500.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh5.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="nikeairmax97.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -281,8 +332,8 @@
                                  <p class="price_text">Giá bán <span style="color: #262626;">3.800.000 VND</span></p>
                                  <div class="tshirt_img"><img src="images/anh6.png"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Mua Ngay</a></div>
-                                    <div class="seemore_bt"><a href="#">Xem thêm</a></div>
+                                      <div class="buy_bt"><a href="thanhtoan2.html">Mua ngay</a></div>
+                                  <div class="seemore_bt"><a href="nikereact87.html">Xem thêm </a></div>
                                  </div>
                               </div>
                            </div>
@@ -291,14 +342,6 @@
                   </div>
                </div>
             </div>
-<<<<<<< HEAD
-            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-            </a>
-=======
            
                <!-- Nút mũi tên trái -->
                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
@@ -309,25 +352,29 @@
                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
                   <i class="fa fa-angle-right"></i>
                </a>
->>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
          </div>
       </div>
       <!-- fashion section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
-            <div class="footer_logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div class="footer_logo"><a href="Nike.html"><img src="images/logo.png"></a></div>
             
-            <div class="footer_menu">
-               <ul>
-                  <li><a href="https://www.facebook.com/tamnhu.trinh.587?mibextid=ZbWKwL" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
-                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
-                <li><a href="https://tiktok.com" target="_blank"><img src="images/tiktok-icon.png" alt="TikTok"></a></li>
-               </ul>
-            </div>
-            <div class="location_main">Điện thoại hỗ trợ: <a href="#">(+84) 819351186</a></div>
-         </div>
-      </div>
+            
+            <div class="product-content-right-product-icon">
+               <div class="product-content-right-product-icon-item">
+                   <i class="fas fa-phone-alt"></i>
+                   <p>Hotline</p>
+               </div>
+               <div class="product-content-right-product-icon-item">
+                   <i class="far fa-comments"></i>
+                   <p>Chat</p>
+               </div>
+               <div class="product-content-right-product-icon-item">
+                   <i class="far fa-envelope"></i>
+                   <p>Mail</p>
+               </div>
+           </div>
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -342,10 +389,7 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
-<<<<<<< HEAD
-=======
       <script src="carousel.js"></script>
->>>>>>> 6b73f7a6763382bda01fec91714d45d33917592d
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>

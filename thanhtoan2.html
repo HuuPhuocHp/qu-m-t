@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .payment-method h2 {
+            margin-bottom: 10px;
+        }
+
+        .payment-method label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .payment-content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .payment-content.active {
+            display: block;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trang Thanh Toán</h1>
+
+        <!-- Thông tin người mua -->
+        <div class="buyer-info">
+            <h2>Thông tin người mua</h2>
+
+            <div class="form-group">
+                <label for="name">Họ và Tên</label>
+                <input type="text" id="name" placeholder="Nhập họ và tên của bạn">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại của bạn">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ giao hàng</label>
+                <textarea id="address" rows="3" placeholder="Nhập địa chỉ giao hàng của bạn"></textarea>
+            </div>
+        </div>
+
+        <!-- Lựa chọn phương thức thanh toán -->
+        <div class="payment-method">
+            <h2>Chọn phương thức thanh toán</h2>
+            <label>
+                <input type="radio" name="payment_method" value="cash" checked> 
+                Thanh toán tiền mặt
+            </label>
+            <label>
+                <input type="radio" name="payment_method" value="bank_transfer"> 
+                Chuyển khoản ngân hàng
+            </label>
+            <label>
+                <input type="radio" name="payment_method" value="credit_card"> 
+                Thanh toán qua thẻ
+            </label>
+        </div>
+
+        <!-- Nội dung của từng phương thức thanh toán -->
+        <div id="cash" class="payment-content active">
+            <h3>Thanh toán tiền mặt</h3>
+            <p>Bạn sẽ thanh toán trực tiếp khi nhận hàng.</p>
+        </div>
+
+        <div id="bank_transfer" class="payment-content">
+            <h3>Chuyển khoản ngân hàng</h3>
+            <p>Chuyển khoản vào tài khoản sau:</p>
+            <p><strong>Ngân hàng:</strong> Vietcombank</p>
+            <p><strong>Số tài khoản:</strong> 123456789</p>
+            <p><strong>Chủ tài khoản:</strong> Nguyễn Văn A</p>
+        </div>
+
+        <div id="credit_card" class="payment-content">
+            <h3>Thanh toán qua thẻ</h3>
+            <div class="form-group">
+                <label for="card_number">Số thẻ</label>
+                <input type="text" id="card_number" placeholder="Nhập số thẻ của bạn">
+            </div>
+
+            <div class="form-group">
+                <label for="card_name">Tên trên thẻ</label>
+                <input type="text" id="card_name" placeholder="Nhập tên trên thẻ">
+            </div>
+
+            <div class="form-group">
+                <label for="expiry_date">Ngày hết hạn</label>
+                <input type="text" id="expiry_date" placeholder="MM/YY">
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" placeholder="Nhập mã CVV">
+            </div>
+        </div>
+
+        <button class="btn" id="payButton">Xác nhận thanh toán</button>
+
+        <div class="success-message" id="successMessage">
+            Thanh toán thành công! Cảm ơn bạn đã mua hàng.
+        </div>
+    </div>
+
+    <script>
+        const paymentMethods = document.querySelectorAll('input[name="payment_method"]');
+        const paymentContents = document.querySelectorAll('.payment-content');
+        const payButton = document.getElementById('payButton');
+        const successMessage = document.getElementById('successMessage');
+
+        // Thay đổi phương thức thanh toán
+        paymentMethods.forEach(method => {
+            method.addEventListener('change', (e) => {
+                const selectedMethod = e.target.value;
+                paymentContents.forEach(content => content.classList.remove('active'));
+                const activeContent = document.getElementById(selectedMethod);
+                activeContent.classList.add('active');
+            });
+        });
+
+        // Xử lý sự kiện nhấn nút thanh toán
+        payButton.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            if (name === '' || phone === '' || address === '') {
+                alert('Vui lòng điền đầy đủ thông tin cá nhân!');
+            } else {
+                successMessage.style.display = 'block';
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        });
+    </script>
+</body>
+</html>
