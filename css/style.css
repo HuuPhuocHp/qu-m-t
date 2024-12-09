@@ -1,4 +1,4 @@
---------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
@@ -1400,7 +1400,7 @@ input.mail_bt::placeholder {
 }
 .product-content-right-product-button button:first-child{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: #ffff;
     border: 2px solid black;
@@ -1412,7 +1412,7 @@ input.mail_bt::placeholder {
 }
 .product-content-right-product-button button:last-child{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: #ffff;
     border: 2px solid ;
@@ -1521,9 +1521,10 @@ input.mail_bt::placeholder {
 /* Căn giữa phần số lượng */
 .quantity {
     display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
+    justify-content: flex-start; /* Căn giữa theo chiều ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     margin-top: 20px; /* Khoảng cách từ phần trên */
+    text-align: center;
 }
 
 .quantity-wrapper {
@@ -1542,12 +1543,29 @@ input.mail_bt::placeholder {
     border: none;
     font-size: 18px;
     cursor: pointer;
+    
 }
 
 .quantity-wrapper input {
     width: 40px;
     height: 40px;
-    text-align: center;
+    
     border: none;
     background-color: #f9f9f9;
 }
+.product-content-right-details {
+    text-align: justify; /* Căn đều nội dung */
+    margin-left: 10px; /* Điều chỉnh để thẳng hàng */
+    padding: 10px; /* Khoảng cách giữa khung và nội dung */
+    border: 1px solid #ddd; /* (Tuỳ chọn) Đường viền để phân biệt */
+    border-radius: 5px; /* (Tuỳ chọn) Góc bo tròn */
+    max-width: 600px; /* (Tuỳ chọn) Đặt chiều rộng tối đa */
+}
+
+.product-content-right-details h3 {
+    margin-bottom: 10px; /* Tạo khoảng cách dưới tiêu đề */
+    font-size: 18px; /* Kích cỡ chữ tiêu đề */
+    font-weight: bold;
+    text-align: center;
+}
+
